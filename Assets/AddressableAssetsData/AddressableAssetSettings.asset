@@ -1,0 +1,252 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 468a46d0ae32c3544b7d98094e6448a9, type: 3}
+  m_Name: AddressableAssetSettings
+  m_EditorClassIdentifier: 
+  m_DefaultGroup: d3245690ec23d214c89dc8825c3a54a9
+  m_currentHash:
+    serializedVersion: 2
+    Hash: 0624de3deff1781ece36fb76af1a8c96
+  m_OptimizeCatalogSize: 0
+  m_BuildRemoteCatalog: 0
+  m_BundleLocalCatalog: 0
+  m_CatalogRequestsTimeout: 0
+  m_DisableCatalogUpdateOnStart: 0
+  m_IgnoreUnsupportedFilesInBuild: 0
+  m_UniqueBundleIds: 0
+  m_NonRecursiveBuilding: 1
+  m_CCDEnabled: 0
+  m_maxConcurrentWebRequests: 3
+  m_ContiguousBundles: 1
+  m_StripUnityVersionFromBundleBuild: 0
+  m_DisableVisibleSubAssetRepresentations: 0
+  m_ShaderBundleNaming: 0
+  m_ShaderBundleCustomNaming: 
+  m_MonoScriptBundleNaming: 0
+  m_CheckForContentUpdateRestrictionsOption: 0
+  m_MonoScriptBundleCustomNaming: 
+  m_RemoteCatalogBuildPath:
+    m_Id: 
+  m_RemoteCatalogLoadPath:
+    m_Id: 
+  m_ContentStateBuildPathProfileVariableName: 
+  m_CustomContentStateBuildPath: 
+  m_ContentStateBuildPath: 
+  m_BuildAddressablesWithPlayerBuild: 0
+  m_overridePlayerVersion: '[UnityEditor.PlayerSettings.bundleVersion]'
+  m_GroupAssets:
+  - {fileID: 11400000, guid: 3969534c718136c4a8a64d0a4ec2048e, type: 2}
+  - {fileID: 11400000, guid: e3b2fa0c5a747bb48a8cdb31df3ad6a3, type: 2}
+  - {fileID: 11400000, guid: 45c7b73f4fd80a74fb7e4d1778966faf, type: 2}
+  - {fileID: 11400000, guid: 7a903a62739f6654aaa61dab4d217f26, type: 2}
+  - {fileID: 11400000, guid: c8d899952aff80244ad7d24c1cae2648, type: 2}
+  m_BuildSettings:
+    m_CompileScriptsInVirtualMode: 0
+    m_CleanupStreamingAssetsAfterBuilds: 1
+    m_LogResourceManagerExceptions: 1
+    m_BundleBuildPath: Temp/com.unity.addressables/AssetBundles
+  m_ProfileSettings:
+    m_Profiles:
+    - m_InheritedParent: 
+      m_Id: eec1e3e1eb9232f45be5496471674dce
+      m_ProfileName: Default
+      m_Values:
+      - m_Id: 2a214459af7bdfd47809c2affb8702de
+        m_Value: ServerData/[BuildTarget]
+      - m_Id: 46c503d7b2678fa45a974415dc11a065
+        m_Value: '{UnityEngine.AddressableAssets.Addressables.RuntimePath}/[BuildTarget]'
+      - m_Id: 9f093211ba228574aa840666146df55c
+        m_Value: '[UnityEngine.AddressableAssets.Addressables.BuildPath]/[BuildTarget]'
+      - m_Id: a34882648e0ed67488c045508b812e66
+        m_Value: http://[PrivateIpAddress]:[HostingServicePort]
+      - m_Id: c8cb5340bdb5ea84e8f02659723414e9
+        m_Value: '[UnityEditor.EditorUserBuildSettings.activeBuildTarget]'
+    m_ProfileEntryNames:
+    - m_Id: 2a214459af7bdfd47809c2affb8702de
+      m_Name: Remote.BuildPath
+      m_InlineUsage: 0
+    - m_Id: 46c503d7b2678fa45a974415dc11a065
+      m_Name: Local.LoadPath
+      m_InlineUsage: 0
+    - m_Id: 9f093211ba228574aa840666146df55c
+      m_Name: Local.BuildPath
+      m_InlineUsage: 0
+    - m_Id: a34882648e0ed67488c045508b812e66
+      m_Name: Remote.LoadPath
+      m_InlineUsage: 0
+    - m_Id: c8cb5340bdb5ea84e8f02659723414e9
+      m_Name: BuildTarget
+      m_InlineUsage: 0
+    m_ProfileVersion: 1
+  m_LabelTable:
+    m_LabelNames:
+    - default
+    - fruit
+    - vegetable
+    - pantry
+    - protein
+    - spice
+    - sause
+    - tool
+    - joker
+    - ingredient-avocado
+    - ingredient-lemon
+    - ingredient-lime
+    - ingredient-orange
+    - ingredient-pineapple
+    - ingredient-almonds
+    - ingredient-baking-powder
+    - ingredient-bean-sprout
+    - ingredient-beans
+    - ingredient-beef-stock
+    - ingredient-bread
+    - ingredient-butter
+    - ingredient-cheddar
+    - ingredient-cheese
+    - ingredient-chocolatte
+    - ingredient-coconut-milk
+    - ingredient-dough
+    - ingredient-dry-oats
+    - ingredient-dry-yeast
+    - ingredient-flour
+    - ingredient-heavy-cream
+    - ingredient-mexican-beans
+    - ingredient-milk
+    - ingredient-mozarella
+    - ingredient-noodle
+    - ingredient-nori
+    - ingredient-olive-oil
+    - ingredient-olives
+    - ingredient-pasta
+    - ingredient-peanut
+    - ingredient-pickles
+    - ingredient-puff-pastry
+    - ingredient-raisins
+    - ingredient-rice
+    - ingredient-chickpea
+    - ingredient-sesame
+    - ingredient-sugar
+    - ingredient-tomato-paste
+    - ingredient-tortilla
+    - ingredient-vinegar
+    - ingredient-walnuts
+    - ingredient-wheat
+    - ingredient-yogurt
+    - ingredient-bacon
+    - ingredient-steak
+    - ingredient-chicken
+    - ingredient-duck
+    - ingredient-egg
+    - ingredient-fish
+    - ingredient-ground-beef
+    - ingredient-lamb
+    - ingredient-lobster
+    - ingredient-mussels
+    - ingredient-pepperoni
+    - ingredient-sausage
+    - ingredient-shrimp
+    - ingredient-salmon
+    - ingredient-tofu
+    - ingredient-tuna
+    - ingredient-bay-leaves
+    - ingredient-black-pepper
+    - ingredient-cinnamon
+    - ingredient-cumin-powder
+    - ingredient-curry
+    - ingredient-ginger
+    - ingredient-green-thyme
+    - ingredient-mint
+    - ingredient-powder-pepper
+    - ingredient-rosemary
+    - ingredient-saffron
+    - ingredient-salt
+    - ingredient-sumac
+    - ingredient-turmeric
+    - ingredient-vanilla-stick
+    - ingredient-asparagus
+    - ingredient-basil
+    - ingredient-capers
+    - ingredient-carrot
+    - ingredient-corn
+    - ingredient-dill
+    - ingredient-eggplant
+    - ingredient-garlic
+    - ingredient-green-pepper
+    - ingredient-lettuce
+    - ingredient-mushroom
+    - ingredient-onion
+    - ingredient-parsley
+    - ingredient-peas
+    - ingredient-potato
+    - ingredient-red-pepper
+    - ingredient-spinach
+    - ingredient-tomato
+    - ingredient-zucchini
+    - ingredient-balzamic-glaze
+    - ingredient-basic-sauce
+    - ingredient-bbq
+    - ingredient-bechamel
+    - ingredient-chimichurri
+    - ingredient-demi-glace
+    - ingredient-gochujang
+    - ingredient-hollandaise
+    - ingredient-honey
+    - ingredient-hot-sauce
+    - ingredient-ketchup
+    - ingredient-mayonnaise
+    - ingredient-mustard
+    - ingredient-sherry
+    - ingredient-soy-sauce
+    - ingredient-sriracha
+    - ingredient-tahini
+    - ingredient-wasabi
+    - tool-blender
+    - tool-blowtorch
+    - tool-box-grater
+    - tool-carbon-steel-wok
+    - tool-cooking-pot
+    - tool-fridge
+    - tool-iron-pan
+    - tool-knife
+    - tool-measuring-cup
+    - tool-meat-cleaver
+    - tool-mesh-strainer
+    - tool-oven
+    - tool-pestle
+    - tool-pressure-cooker
+    - tool-rolling-pin
+    - tool-sous-vide
+    - tool-stand-mixer
+    - tool-tongs
+    - tool-wooden-spoon
+    - tool-zester
+    - ingredient-scriptables
+  m_SchemaTemplates: []
+  m_GroupTemplateObjects:
+  - {fileID: 11400000, guid: e9a0f2d9c0abbb44097706679c941769, type: 2}
+  m_InitializationObjects: []
+  m_CertificateHandlerType:
+    m_AssemblyName: 
+    m_ClassName: 
+  m_ActivePlayerDataBuilderIndex: 3
+  m_DataBuilders:
+  - {fileID: 11400000, guid: 22b91f493aa160747949256b38fa7f97, type: 2}
+  - {fileID: 11400000, guid: 7fe818679363cb1468ce355accc28f36, type: 2}
+  - {fileID: 11400000, guid: 684f417e0be7bef498ec46062e41df74, type: 2}
+  - {fileID: 11400000, guid: fa27cbe87e8c02c42809ee189d0744b9, type: 2}
+  m_ActiveProfileId: eec1e3e1eb9232f45be5496471674dce
+  m_HostingServicesManager:
+    m_HostingServiceInfos: []
+    m_Settings: {fileID: 11400000}
+    m_NextInstanceId: 0
+    m_RegisteredServiceTypeRefs: []
+    m_PingTimeoutInMilliseconds: 5000
