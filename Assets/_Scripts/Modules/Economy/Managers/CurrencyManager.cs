@@ -1,7 +1,8 @@
 using System;
 using Modules.Economy.Enums;
+using Modules.Economy.Events;
 using Modules.Economy.Models;
-using Modules.EventSystem.Managers;
+using Modules.Event.Managers;
 
 namespace Modules.Economy.Managers
 {
@@ -15,8 +16,8 @@ namespace Modules.Economy.Managers
             _gold = new Gold(startingGold);
             _gem = new Gem(startingGems);
 
-            EventManager.DelegateCurrencyRequestCompleted(ECurrencyType.Gem);
-            EventManager.DelegateCurrencyRequestCompleted(ECurrencyType.Gold);
+            EventManager.Delegate(new CurrencyRequestCompletedEvent(ECurrencyType.Gold));
+            EventManager.Delegate(new CurrencyRequestCompletedEvent(ECurrencyType.Gem));
         }
 
         public static int GetAmount(ECurrencyType type)
@@ -36,11 +37,11 @@ namespace Modules.Economy.Managers
             {
                 case ECurrencyType.Gold:
                     _gold.Add(amount);
-                    EventManager.DelegateCurrencyChanged(type, _gold.Amount);
+                    EventManager.Delegate(new CurrencyChangedEvent(type, _gold.Amount));
                     break;
                 case ECurrencyType.Gem:
                     _gem.Add(amount);
-                    EventManager.DelegateCurrencyChanged(type, _gem.Amount);
+                    EventManager.Delegate(new CurrencyChangedEvent(type, _gem.Amount));
                     break;
             }
         }
@@ -53,14 +54,14 @@ namespace Modules.Economy.Managers
                 case ECurrencyType.Gold:
                     if (_gold.TryConsume(amount))
                     {
-                        EventManager.DelegateCurrencyChanged(type, _gold.Amount);
+                        EventManager.Delegate(new CurrencyChangedEvent(type, _gold.Amount));
                         return true;
                     }
                     return false;
                 case ECurrencyType.Gem:
                     if (_gem.TryConsume(amount))
                     {
-                        EventManager.DelegateCurrencyChanged(type, _gem.Amount);
+                        EventManager.Delegate(new CurrencyChangedEvent(type, _gem.Amount));
                         return true;
                     }
                     return false;
@@ -76,11 +77,11 @@ namespace Modules.Economy.Managers
             {
                 case ECurrencyType.Gold:
                     _gold.Amount = amount;
-                    EventManager.DelegateCurrencyChanged(type, _gold.Amount);
+                    EventManager.Delegate(new CurrencyChangedEvent(type, _gold.Amount));
                     break;
                 case ECurrencyType.Gem:
                     _gem.Amount = amount;
-                    EventManager.DelegateCurrencyChanged(type, _gem.Amount);
+                    EventManager.Delegate(new CurrencyChangedEvent(type, _gem.Amount));
                     break;
             }
         }

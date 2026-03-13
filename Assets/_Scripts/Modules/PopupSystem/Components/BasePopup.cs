@@ -2,10 +2,11 @@ using Modules.ObjectPoolSystem;
 using TMPro;
 using UnityEngine;
 using Utilities;
-using Modules.EventSystem.Managers;
 using UnityEngine.UI;
 using DG.Tweening;
 using Modules.AdressableSystem;
+using Modules.Event.Managers;
+using Modules.PopupSystem.Events;
 
 namespace Modules.PopupSystem.Components
 {
@@ -75,7 +76,8 @@ namespace Modules.PopupSystem.Components
             _sequence.OnComplete(() =>
             {
                 try { OnAfterShow(); } catch { }
-                EventManager.DelegatePopupShowed(this);
+
+                EventManager.Delegate(new PopupShowedEvent(this));
             });
 
             Init();
@@ -108,7 +110,7 @@ namespace Modules.PopupSystem.Components
                 try { OnAfterClose(); } catch { }
 
                 base.Deactivate();
-                EventManager.DelegatePopupClosed(this);
+                EventManager.Delegate(new PopupClosedEvent(this));
                 _isClosing = false;
             });
         }
@@ -138,7 +140,7 @@ namespace Modules.PopupSystem.Components
                     base.Deactivate();
                 }
                 catch { }
-                EventManager.DelegatePopupClosed(this);
+                EventManager.Delegate(new PopupClosedEvent(this));
 
                 if (releaseInstance)
                 {

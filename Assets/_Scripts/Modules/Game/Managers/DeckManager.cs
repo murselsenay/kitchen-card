@@ -1,6 +1,8 @@
 using Cysharp.Threading.Tasks;
+using Modules.Event.Managers;
 using Modules.Game.Constants;
 using Modules.Game.Enums;
+using Modules.Game.Events;
 using Modules.Game.Scriptables.Card;
 using Modules.Game.Scriptables.Recipe;
 using Modules.Logger;
@@ -16,11 +18,20 @@ namespace Modules.Game.Managers
         public static async UniTask Init()
         {
             await CreateDeck();
+
+            EventSubscribe();
+        }
+
+        public static void EventSubscribe()
+        {
+            EventManager.Subscribe<AddSelectedCardEvent>(OnAddSelectedCard);
+            EventManager.Subscribe<RemoveSelectedCardEvent>(OnRemoveSelectedCard);
         }
 
         private static async UniTask CreateDeck()
         {
-            _deck = new List<CardScriptable>(CardManager.GetAllCardScriptables());
+            _deck = CardManager.GetStageCardScriptables();
+            DebugLogger.Log(_deck.Count.ToString());
         }
 
         public static CardScriptable GetRandomCard(EIngredientCategory category = EIngredientCategory.None)
@@ -29,36 +40,30 @@ namespace Modules.Game.Managers
         }
         public static CardScriptable GetRandomCard(EIngredientCategory category = EIngredientCategory.None, List<CardScriptable> excludeCards = null)
         {
-            var filteredDeck = new List<CardScriptable>(_deck);
-            if (category != EIngredientCategory.None)
-            {
-                filteredDeck = filteredDeck.FindAll(card => card.GetCardCategory() == category);
-            }
-            if (excludeCards != null && excludeCards.Count > 0)
-            {
-                filteredDeck = filteredDeck.FindAll(card => !excludeCards.Contains(card));
-            }
-
             int totalWeight = 0;
-            foreach (var card in filteredDeck)
+            foreach (var card in _deck)
             {
+                if (category != EIngredientCategory.None && card.GetCardCategory() != category) continue;
+                if (excludeCards != null && excludeCards.Contains(card)) continue;
+
                 totalWeight += card.GetTotalWeight();
             }
-            if (totalWeight == 0 || filteredDeck.Count == 0)
-                return null;
-            int randomValue = UnityEngine.Random.Range(0, totalWeight);
+
+            if (totalWeight <= 0) return null;
+
+            int randomValue = Random.Range(0, totalWeight);
             int cumulative = 0;
-            CardScriptable drawnCard = null;
-            foreach (var card in filteredDeck)
+
+            foreach (var card in _deck)
             {
+                if (category != EIngredientCategory.None && card.GetCardCategory() != category) continue;
+                if (excludeCards != null && excludeCards.Contains(card)) continue;
+
                 cumulative += card.GetTotalWeight();
-                if (randomValue < cumulative)
-                {
-                    drawnCard = card;
-                    break;
-                }
+                if (randomValue < cumulative) return card;
             }
-            return drawnCard;
+
+            return null;
         }
 
         public static List<RecipeScriptable> EvaluateCardsWithRecipe(List<CardScriptable> handCards)
@@ -93,24 +98,24 @@ namespace Modules.Game.Managers
             return _selectedCards ?? new List<CardScriptable>();
         }
 
-        public static bool AddSelectedCard(CardScriptable card)
+        public static void OnAddSelectedCard(AddSelectedCardEvent e)
         {
             if (_selectedCards == null)
                 _selectedCards = new List<CardScriptable>(GameConstants.DEFAULT_SELECTED_CARDS_LIMIT);
-            if (_selectedCards.Count < 6 && !_selectedCards.Contains(card))
+            if (_selectedCards.Count < 6 && !_selectedCards.Contains(e.Card))
             {
-                _selectedCards.Add(card);
-                return true;
+                _selectedCards.Add(e.Card);
+                EventManager.Delegate(new CardSelectedEvent(e.Card));
             }
-            return false;
         }
 
-        public static bool RemoveSelectedCard(CardScriptable card)
+        public static void OnRemoveSelectedCard(RemoveSelectedCardEvent e)
         {
-            if (_selectedCards != null && _selectedCards.Contains(card))
-                _selectedCards.Remove(card);
-
-            return true;
+            if (_selectedCards != null && _selectedCards.Contains(e.Card))
+            {
+                _selectedCards.Remove(e.Card);
+                EventManager.Delegate(new CardDeselectedEvent(e.Card));
+            }
         }
 
         #region Test Methods
@@ -118,17 +123,22 @@ namespace Modules.Game.Managers
         public static List<CardScriptable> CreateTestHand()
         {
             var cards = new List<CardScriptable>();
-            cards.Add(GetRandomCard(EIngredientCategory.Protein, cards));
-            cards.Add(GetRandomCard(EIngredientCategory.Protein, cards));
-            cards.Add(GetRandomCard(EIngredientCategory.Vegetable, cards));
-            cards.Add(GetRandomCard(EIngredientCategory.Vegetable, cards));
-            cards.Add(GetRandomCard(EIngredientCategory.Pantry, cards));
-            cards.Add(GetRandomCard(EIngredientCategory.Pantry, cards));
-            cards.Add(GetRandomCard(EIngredientCategory.Spice, cards));
-            cards.Add(GetRandomCard(EIngredientCategory.Sauce, cards));
-            cards.Add(GetRandomCard(EIngredientCategory.Vegetable, cards));
-            cards.Add(GetRandomCard(EIngredientCategory.Pantry, cards));
-            cards.Add(GetRandomCard(EIngredientCategory.Protein, cards));
+            //cards.Add(GetRandomCard(EIngredientCategory.Protein, cards));
+            //cards.Add(GetRandomCard(EIngredientCategory.Protein, cards));
+            //cards.Add(GetRandomCard(EIngredientCategory.Vegetable, cards));
+            //cards.Add(GetRandomCard(EIngredientCategory.Vegetable, cards));
+            //cards.Add(GetRandomCard(EIngredientCategory.Pantry, cards));
+            //cards.Add(GetRandomCard(EIngredientCategory.Pantry, cards));
+            //cards.Add(GetRandomCard(EIngredientCategory.Spice, cards));
+            //cards.Add(GetRandomCard(EIngredientCategory.Sauce, cards));
+            //cards.Add(GetRandomCard(EIngredientCategory.Vegetable, cards));
+            //cards.Add(GetRandomCard(EIngredientCategory.Pantry, cards));
+            //cards.Add(GetRandomCard(EIngredientCategory.Protein, cards));
+            cards.Add(GetRandomCard(excludeCards: cards));
+            cards.Add(GetRandomCard(excludeCards: cards));
+            cards.Add(GetRandomCard(excludeCards: cards));
+            cards.Add(GetRandomCard(excludeCards: cards));
+            cards.Add(GetRandomCard(excludeCards: cards));
             cards.Add(GetRandomCard(excludeCards: cards));
             return cards;
         }

@@ -2,9 +2,10 @@ using System.Collections.Generic;
 using System.Linq;
 using Cysharp.Threading.Tasks;
 using Modules.AdressableSystem;
+using Modules.Event.Managers;
 using Modules.PopupSystem.Components;
-using Modules.EventSystem.Managers;
 using Modules.PopupSystem.Enums;
+using Modules.PopupSystem.Events;
 using UnityEngine;
 
 namespace Modules.PopupSystem.Managers
@@ -71,13 +72,13 @@ namespace Modules.PopupSystem.Managers
 
             var tcs = new UniTaskCompletionSource<bool>();
 
-            void OnClosed(BasePopup b)
+            void OnClosed(PopupClosedEvent e)
             {
-                if (b == _currentPopup)
+                if (e.Popup == _currentPopup)
                     tcs.TrySetResult(true);
             }
 
-            EventManager.OnPopupClosed += OnClosed;
+            EventManager.Subscribe<PopupClosedEvent>(OnClosed);
 
             try
             {
@@ -87,7 +88,7 @@ namespace Modules.PopupSystem.Managers
 
             await tcs.Task;
 
-            EventManager.OnPopupClosed -= OnClosed;
+            EventManager.Unsubscribe<PopupClosedEvent>(OnClosed);
 
             if (instance != null && instance.gameObject != null)
             {

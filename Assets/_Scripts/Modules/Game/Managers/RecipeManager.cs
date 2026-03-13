@@ -11,7 +11,7 @@ namespace Modules.Game.Managers
     public static class RecipeManager
     {
         private static Dictionary<ERecipeCategory, List<RecipeScriptable>> _recipeScriptables;
-
+        private static List<RecipeScriptable> _allRecipeScriptables;
         public static async UniTask Init()
         {
             await LoadRecipeData();
@@ -35,12 +35,26 @@ namespace Modules.Game.Managers
 
         public static List<RecipeScriptable> GetAllRecipeScriptables()
         {
-            var allRecipes = new List<RecipeScriptable>();
+            if (_allRecipeScriptables != null)
+                return _allRecipeScriptables;
+
+            _allRecipeScriptables = new List<RecipeScriptable>();
             foreach (var category in _recipeScriptables.Values)
             {
-                allRecipes.AddRange(category);
+                _allRecipeScriptables.AddRange(category);
             }
-            return allRecipes;
+            return _allRecipeScriptables;
+        }
+
+        public static RecipeScriptable GetRecipeScriptable(ERecipeType recipeType)
+        {
+            foreach (var category in _recipeScriptables.Values)
+            {
+                var recipe = category.Find(r => r.GetRecipeType() == recipeType);
+                if (recipe != null) return recipe;
+            }
+            DebugLogger.LogError($"RecipeScriptable with type {recipeType} not found.");
+            return null;
         }
     }
 }

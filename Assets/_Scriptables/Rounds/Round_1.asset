@@ -9,11 +9,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 52d99abf27a2bfa4d820f83677ddf20f, type: 3}
-  m_Name: Pasta_Bolognese
+  m_Script: {fileID: 11500000, guid: 78bf0b680985264469d7a559ca6b603d, type: 3}
+  m_Name: Round_1
   m_EditorClassIdentifier: 
-  _name: Pasta Bolognese
-  _description: 
-  _recipeType: 16
-  _recipeCategory: 3
-  _ingredients: 84000000950100007c000000
+  _id: 
+  _availableRecipes: 01000000040000000a000000090000001000000011000000120000001e0000001d0000001a0000001b0000001700000013000000230000001f000000
+  _customerSatisfactionTargetPoint: 500

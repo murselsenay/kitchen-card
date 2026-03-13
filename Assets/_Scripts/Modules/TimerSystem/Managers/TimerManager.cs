@@ -2,7 +2,8 @@ using System.Threading;
 using Cysharp.Threading.Tasks;
 using System;
 using Utilities.Extensions;
-using Modules.EventSystem.Managers;
+using Modules.Event.Managers;
+using Modules.TimerSystem.Events;
 
 namespace Modules.TimerSystem.Managers
 {
@@ -64,7 +65,7 @@ namespace Modules.TimerSystem.Managers
                     Interlocked.Increment(ref _currentTimeUnix);
 
                     // Trigger global timer tick event
-                    EventManager.DelegateTimerTick(CurrentTime);
+                    EventManager.Delegate(new TimerTickEvent(CurrentTime));
                 }
             }
             catch (OperationCanceledException)

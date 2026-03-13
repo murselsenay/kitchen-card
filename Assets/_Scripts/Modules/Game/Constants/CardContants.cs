@@ -21,7 +21,7 @@ namespace Modules.Game.Constants
             EIngredientType.Ketchup,
         };
 
-        #region Card Weighting
+        #region Card Category Weighting
 
         public static readonly Dictionary<EIngredientCategory, int> CARD_CATEGORY_WEIGHTS = new Dictionary<EIngredientCategory, int>
         {
@@ -31,13 +31,6 @@ namespace Modules.Game.Constants
             { EIngredientCategory.Protein, 25 },
             { EIngredientCategory.Sauce, 15 },
             { EIngredientCategory.Spice, 15 },
-        };
-
-        public static readonly Dictionary<ERarity, int> RARITY_WEIGHTS = new Dictionary<ERarity, int>
-        {
-            { ERarity.Local, 50 },
-            { ERarity.Gourmet, 35 },
-            { ERarity.Signature, 15 },
         };
 
         #endregion

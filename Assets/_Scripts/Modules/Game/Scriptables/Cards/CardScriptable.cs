@@ -18,10 +18,10 @@ namespace Modules.Game.Scriptables.Card
         public string GetDescription() => _description;
         public ECardType GetCardType() => _type;
         public EIngredientCategory GetCardCategory() => _category;
-        public ERarity GetCardRarity() => _rarity;
+        public ERarity GetRarity() => _rarity;
         public EIngredientType GetIngredientType() => _ingredientType;
         public virtual string GetResourceKey() { return string.Empty; }
         public async UniTask<Sprite> GetIconSprite() => await AddressableManager.LoadAsync<Sprite>(GetResourceKey());
-        public int GetTotalWeight() => CardConstants.RARITY_WEIGHTS[_rarity];
+        public int GetTotalWeight() => GameConstants.RARITY_WEIGHTS[_rarity];
     }
 }

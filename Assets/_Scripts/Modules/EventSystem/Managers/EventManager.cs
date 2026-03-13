@@ -1,88 +1,215 @@
-using UnityEngine;
-using Modules.Economy.Enums;
-using Modules.PopupSystem.Components;
 using System;
+using System.Threading;
+using Cysharp.Threading.Tasks;
+using System.Collections.Generic;
+using System.Collections.Concurrent;
+using System.Runtime.CompilerServices;
+using Modules.Logger;
 
-namespace Modules.EventSystem.Managers
+namespace Modules.Event.Managers
 {
     public static class EventManager
     {
-        #region Events
+        private static readonly object _lock = new();
+        private static readonly Dictionary<Type, HashSet<Delegate>> _subscribers = new();
+        private static readonly ConcurrentQueue<List<Delegate>> _delegateListPool = new();
 
-        //Economy
-        public static event Action<Transform, ECurrencyType, int> OnSpawnCurrencyRequest;
-        public static event Action<ECurrencyType, int> OnCurrencyChanged;
-        public static event Action<ECurrencyType> OnCurrencyRequestCompleted;
-
-        //Popups
-        public static event Action<BasePopup> OnPopupShowed;
-        public static event Action<BasePopup> OnPopupClosed;
-
-        // Timer
-        public static event Action<long> OnTimerTick;
-
-        #endregion
-
-        #region Timer
-        public static void DelegateTimerTick(long unixTime)
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        public static void Subscribe<T>(Action<T> listener)
         {
-            try
+            if (listener == null) return;
+
+            lock (_lock)
             {
-                OnTimerTick?.Invoke(unixTime);
+                var type = typeof(T);
+                if (!_subscribers.TryGetValue(type, out var hashSet))
+                {
+                    hashSet = new HashSet<Delegate>(4);
+                    _subscribers[type] = hashSet;
+                }
+                hashSet.Add(listener);
             }
-            catch { }
         }
 
-        #endregion
-
-        #region Popup
-        public static void DelegatePopupShowed(BasePopup popup)
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        public static void SubscribeOnce<T>(Action<T> listener)
         {
-            try
+            if (listener == null) return;
+
+            lock (_lock)
             {
-                OnPopupShowed?.Invoke(popup);
+                var type = typeof(T);
+                if (!_subscribers.TryGetValue(type, out var hashSet))
+                {
+                    hashSet = new HashSet<Delegate>(4);
+                    _subscribers[type] = hashSet;
+                }
+                else
+                {
+                    var target = listener.Target;
+                    var declaringType = listener.Method.DeclaringType;
+                    Delegate existing = null;
+
+                    foreach (var d in hashSet)
+                    {
+                        if (target != null)
+                        {
+                            if (d.Target == target) { existing = d; break; }
+                        }
+                        else
+                        {
+                            if (d.Target == null && d.Method.DeclaringType == declaringType) { existing = d; break; }
+                        }
+                    }
+
+                    if (existing != null)
+                        hashSet.Remove(existing);
+                }
+
+                hashSet.Add(listener);
             }
-            catch { }
         }
 
-        public static void DelegatePopupClosed(BasePopup popup)
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        public static void Unsubscribe<T>(Action<T> listener)
         {
-            try
-            {
-                OnPopupClosed?.Invoke(popup);
-            }
-            catch { }
-        }
-        #endregion
+            if (listener == null) return;
 
-        #region Currency
-        public static void DelegateSpawnCurrencyRequest(Transform spawnPoint, ECurrencyType type, int amount)
-        {
-            try
+            lock (_lock)
             {
-                OnSpawnCurrencyRequest?.Invoke(spawnPoint, type, amount);
+                var type = typeof(T);
+                if (_subscribers.TryGetValue(type, out var hashSet))
+                {
+                    hashSet.Remove(listener);
+                    if (hashSet.Count == 0)
+                        _subscribers.Remove(type);
+                }
             }
-            catch { }
         }
 
-        public static void DelegateCurrencyChanged(ECurrencyType type, int amount)
+        public static void Delegate<T>(T evt)
         {
-            try
+            List<Delegate> listenersToInvoke = null;
+
+            lock (_lock)
             {
-                OnCurrencyChanged?.Invoke(type, amount);
+                var type = typeof(T);
+                if (_subscribers.TryGetValue(type, out var hashSet) && hashSet.Count > 0)
+                {
+                    if (!_delegateListPool.TryDequeue(out listenersToInvoke))
+                        listenersToInvoke = new List<Delegate>(hashSet.Count);
+                    else
+                    {
+                        listenersToInvoke.Clear();
+                        if (listenersToInvoke.Capacity < hashSet.Count)
+                            listenersToInvoke.Capacity = hashSet.Count;
+                    }
+
+                    foreach (var listener in hashSet)
+                        listenersToInvoke.Add(listener);
+                }
             }
-            catch { }
+
+            if (listenersToInvoke != null && listenersToInvoke.Count > 0)
+            {
+                for (int i = 0; i < listenersToInvoke.Count; i++)
+                {
+                    try
+                    {
+                        ((Action<T>)listenersToInvoke[i]).Invoke(evt);
+                    }
+                    catch (Exception ex)
+                    {
+                        DebugLogger.LogException(ex);
+                    }
+                }
+
+                listenersToInvoke.Clear();
+                if (listenersToInvoke.Capacity < 100)
+                    _delegateListPool.Enqueue(listenersToInvoke);
+            }
         }
 
-        public static void DelegateCurrencyRequestCompleted(ECurrencyType type)
+        public static void DelegateNextFrame<T>(T evt)
         {
+            DelegateNextFrameAsync(evt).Forget();
+        }
+
+        private static async UniTaskVoid DelegateNextFrameAsync<T>(T evt)
+        {
+            await UniTask.NextFrame();
+            Delegate(evt);
+        }
+
+        public static async UniTask DelegateIf<T>(T evt, Func<T, UniTask<bool>> predicate)
+        {
+            if (await predicate(evt))
+            {
+                Delegate(evt);
+            }
+        }
+
+        public static async UniTask WaitForEvent<T>(CancellationToken token = default)
+        {
+            var tcs = new UniTaskCompletionSource();
+
+            void handler(T e)
+            {
+                Unsubscribe((Action<T>)handler);
+                tcs.TrySetResult();
+            }
+
+            Subscribe<T>(handler);
+
             try
             {
-                OnCurrencyRequestCompleted?.Invoke(type);
+                await tcs.Task.AttachExternalCancellation(token);
             }
-            catch { }
+            finally
+            {
+                Unsubscribe((Action<T>)handler);
+            }
         }
-        #endregion
 
+        public static async UniTask WaitForEvent<T>(Func<T, bool> predicate, CancellationToken token = default)
+        {
+            var tcs = new UniTaskCompletionSource();
+
+            void handler(T e)
+            {
+                if (predicate(e))
+                {
+                    Unsubscribe((Action<T>)handler);
+                    tcs.TrySetResult();
+                }
+            }
+
+            Subscribe<T>(handler);
+
+            try
+            {
+                await tcs.Task.AttachExternalCancellation(token);
+            }
+            finally
+            {
+                Unsubscribe((Action<T>)handler);
+            }
+        }
+
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        public static void Delegate<T>() where T : struct
+        {
+            Delegate(default(T));
+        }
+
+        public static void ClearAll()
+        {
+            lock (_lock)
+            {
+                _subscribers.Clear();
+
+                while (_delegateListPool.TryDequeue(out _)) { }
+            }
+        }
     }
 }

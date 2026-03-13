@@ -23,6 +23,7 @@ public class Test : MonoBehaviour
     {
         await CardManager.Init();
         await RecipeManager.Init();
+        await StageManager.Init();
         await DeckManager.Init();
     }
 
@@ -37,7 +38,7 @@ public class Test : MonoBehaviour
             var str = string.Empty;
             foreach (var item in recipes)
             {
-                str += $"{item.GetName()} |";
+                str += $" {item.GetName()} - ({item.GetRecipeCategory()}) |";
             }
             _recipeTypeText.text = str.Remove(str.Length - 1);
         }
@@ -88,9 +89,10 @@ public class Test : MonoBehaviour
         foreach (var item in selectedCards)
         {
             var randomCard = DeckManager.GetRandomCard(item.GetCardCategory(), _cardItems.ConvertAll(x => x.CardScriptable));
+            var sentCard = _cardItems.Find(x => x.CardScriptable.GetIngredientType() == item.GetIngredientType());
+            sentCard.gameObject.SetActive(false);
             var cardItem = await AddressableManager.InstantiateAsync<CardItem>(GameConstants.CARD_ITEM_SCRIPTABLE_ADDRESSABLE_KEY, _cardHolder);
             await cardItem.Init(randomCard);
-            var sentCard = _cardItems.Find(x => x.CardScriptable.GetIngredientType() == item.GetIngredientType());
             cardItem.transform.localPosition = new Vector3(sentCard.transform.localPosition.x, 0, sentCard.transform.localPosition.z);
             _cardItems.Add(cardItem);
         }

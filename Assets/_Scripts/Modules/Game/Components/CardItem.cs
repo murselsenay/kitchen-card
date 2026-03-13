@@ -1,7 +1,8 @@
 using Cysharp.Threading.Tasks;
+using Modules.Event.Managers;
+using Modules.Game.Events;
 using Modules.Game.Managers;
 using Modules.Game.Scriptables.Card;
-using System;
 using UnityEngine;
 
 namespace Modules.Game.Components
@@ -21,29 +22,40 @@ namespace Modules.Game.Components
             _iconSpriteRenderer.sprite = await cardScriptable.GetIconSprite();
         }
 
-        public void Select()
+        public void OnCardSelected(CardSelectedEvent e)
         {
-            if (DeckManager.AddSelectedCard(_cardScriptable))
-                transform.localPosition = new Vector3(transform.localPosition.x, 2f, transform.localPosition.z);
+            if (e.Card.GetIngredientType() != _cardScriptable.GetIngredientType()) return;
+            transform.localPosition = new Vector3(transform.localPosition.x, 2f, transform.localPosition.z);
         }
 
-        public void Deselect()
+        public void OnCardDeselected(CardDeselectedEvent e)
         {
+            if (e.Card.GetIngredientType() != _cardScriptable.GetIngredientType()) return;
             transform.localPosition = new Vector3(transform.localPosition.x, 0, transform.localPosition.z);
-
-            DeckManager.RemoveSelectedCard(_cardScriptable);
         }
 
         private void OnMouseDown()
         {
             if (_isSelected)
             {
-                Deselect();
+                EventManager.Delegate(new RemoveSelectedCardEvent(_cardScriptable));
             }
             else
             {
-                Select();
+                EventManager.Delegate(new AddSelectedCardEvent(_cardScriptable));
             }
+        }
+
+        private void OnEnable()
+        {
+            EventManager.Subscribe<CardSelectedEvent>(OnCardSelected);
+            EventManager.Subscribe<CardDeselectedEvent>(OnCardDeselected);
+        }
+
+        private void OnDisable()
+        {
+            EventManager.Unsubscribe<CardSelectedEvent>(OnCardSelected);
+            EventManager.Unsubscribe<CardDeselectedEvent>(OnCardDeselected);
         }
     }
 }
