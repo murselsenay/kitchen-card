@@ -17,5 +17,4 @@ MonoBehaviour:
   _type: 1
   _category: 1
   _rarity: 1
-  _resourceKey: ingredient-
-  _vegetableType: 7
+  _ingredientType: 206

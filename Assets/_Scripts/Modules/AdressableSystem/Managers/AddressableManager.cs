@@ -10,6 +10,9 @@ namespace Modules.AdressableSystem
 {
     public static class AddressableManager
     {
+        // Track handles for instantiated objects
+        private static Dictionary<GameObject, AsyncOperationHandle<GameObject>> _instanceHandles = new Dictionary<GameObject, AsyncOperationHandle<GameObject>>();
+
         public static async UniTask Initialize()
         {
                 
@@ -45,7 +48,10 @@ namespace Modules.AdressableSystem
             await handle.Task;
 
             if (handle.Status == AsyncOperationStatus.Succeeded)
+            {
+                _instanceHandles[handle.Result] = handle;
                 return handle.Result;
+            }
 
             DebugLogger.LogError($"Addressable instantiate failed: {address}");
             return null;
@@ -64,7 +70,7 @@ namespace Modules.AdressableSystem
                     DebugLogger.LogError($"Addressable instantiate returned null GameObject: {address}");
                     return null;
                 }
-
+                _instanceHandles[go] = handle;
                 TComponent comp = go.GetComponent<TComponent>();
                 if (comp != null)
                     return comp;
@@ -80,11 +86,21 @@ namespace Modules.AdressableSystem
         public static void ReleaseInstance(GameObject instance)
         {
             if (instance == null) return;
-            Addressables.ReleaseInstance(instance);
+            if (_instanceHandles.TryGetValue(instance, out var handle))
+            {
+                Addressables.Release(handle);
+                _instanceHandles.Remove(instance);
+            }
+            Object.Destroy(instance);
         }
 
         public static void Release<T>(T obj)
         {
+            if (obj is GameObject go)
+            {
+                ReleaseInstance(go);
+                return;
+            }
             Addressables.Release(obj);
         }
     }

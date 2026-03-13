@@ -17,5 +17,4 @@ MonoBehaviour:
   _type: 1
   _category: 4
   _rarity: 3
-  _resourceKey: ingredient-
-  _pantryType: 22
+  _ingredientType: 121

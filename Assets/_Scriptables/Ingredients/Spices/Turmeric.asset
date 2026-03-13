@@ -17,5 +17,4 @@ MonoBehaviour:
   _type: 1
   _category: 5
   _rarity: 3
-  _resourceKey: ingredient-
-  _spiceType: 14
+  _ingredientType: 513

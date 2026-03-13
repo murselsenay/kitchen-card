@@ -12,10 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 468a46d0ae32c3544b7d98094e6448a9, type: 3}
   m_Name: AddressableAssetSettings
   m_EditorClassIdentifier: 
-  m_DefaultGroup: d3245690ec23d214c89dc8825c3a54a9
+  m_DefaultGroup: 186225ed706d27e4db44f9ca4436b8c0
   m_currentHash:
     serializedVersion: 2
-    Hash: 0624de3deff1781ece36fb76af1a8c96
+    Hash: e6219d5a0f05c8b92ba9165272e8bfb3
   m_OptimizeCatalogSize: 0
   m_BuildRemoteCatalog: 0
   m_BundleLocalCatalog: 0
@@ -45,8 +45,10 @@ MonoBehaviour:
   m_overridePlayerVersion: '[UnityEditor.PlayerSettings.bundleVersion]'
   m_GroupAssets:
   - {fileID: 11400000, guid: 3969534c718136c4a8a64d0a4ec2048e, type: 2}
+  - {fileID: 11400000, guid: bb8e9cd7c0d99f940acaebec34540581, type: 2}
   - {fileID: 11400000, guid: e3b2fa0c5a747bb48a8cdb31df3ad6a3, type: 2}
-  - {fileID: 11400000, guid: 45c7b73f4fd80a74fb7e4d1778966faf, type: 2}
+  - {fileID: 11400000, guid: fd54a87258f976949af56e96f022f43e, type: 2}
+  - {fileID: 11400000, guid: fde785091b749214ea0cdc1c369c0497, type: 2}
   - {fileID: 11400000, guid: 7a903a62739f6654aaa61dab4d217f26, type: 2}
   - {fileID: 11400000, guid: c8d899952aff80244ad7d24c1cae2648, type: 2}
   m_BuildSettings:
@@ -127,7 +129,7 @@ MonoBehaviour:
     - ingredient-olive-oil
     - ingredient-olives
     - ingredient-pasta
-    - ingredient-peanut
+    - ingredient-peanuts
     - ingredient-pickles
     - ingredient-puff-pastry
     - ingredient-raisins
@@ -230,6 +232,74 @@ MonoBehaviour:
     - tool-wooden-spoon
     - tool-zester
     - ingredient-scriptables
+    - recipe-tomato-bruscetta
+    - recipe-classic-fries
+    - recipe-roasted-eggplant
+    - recipe-buttery-mushroom
+    - recipe-thyme-lamb
+    - recipe-breakfast-plate
+    - recipe-steak-sandwich
+    - recipe-carrot-dip-base
+    - recipe-cured-salmon
+    - recipe-quick-chicken-curry
+    - recipe-steak-and-chips
+    - recipe-chicken-and-rice
+    - recipe-baked-salmon-plate
+    - recipe-sauteed-meat
+    - recipe-menemen
+    - recipe-pasta-bolognese
+    - recipe-mashed-potatoes
+    - recipe-chickpea-rice
+    - recipe-zucchini-borani
+    - recipe-eggplant-kebap
+    - recipe-creamy-mushroom-steak
+    - recipe-vegetable-chicken-rice
+    - recipe-moussaka
+    - recipe-creamy-spinach-salmon
+    - recipe-meaty-bean-stew
+    - recipe-pasta-carbonara
+    - recipe-garlic-shrimp-sizzler
+    - recipe-izmir-kofta
+    - recipe-chicken-fajitas
+    - recipe-mixed-pizza
+    - recipe-hungarian-gulash
+    - recipe-hunkar-begendi
+    - recipe-asian-salmon-bowl
+    - recipe-chicken-volauvent
+    - recipe-classic-lasagna
+    - recipe-philly-cheesesteak
+    - recipe-orange-duck
+    - recipe-mediterranean-fish-stew
+    - recipe-seafood-paella
+    - recipe-lahmacun
+    - recipe-ultimate-surf-and-turf
+    - recipe-sultans-feast-rice
+    - recipe-beef-wellington
+    - recipe-mexican-fiesta-platter
+    - recipe-shepherds-pie
+    - recipe-french-bouillabaisse
+    - recipe-nordic-gourmet-salmon
+    - recipe-beef-stroganoff
+    - recipe-gourmet-margherita
+    - recipe-vegetable-lamb-stew
+    - recipe-shakshuka
+    - recipe-sushi-platter
+    - recipe-pad-thai
+    - recipe-bibimbap
+    - recipe-lobster-thermidor
+    - recipe-roasted-duck-with-demi-glace
+    - recipe-hawaiian-bbq-feast
+    - recipe-spicy-sriracha-salmon-tataki
+    - recipe-anatolian-lamb-hummus
+    - recipe-argentinian-chimichurri
+    - recipe-lava-cake
+    - recipe-aromatic-rice-pudding
+    - recipe-zesty-yogurt-parfait
+    - recipe-exotic-coconut-lime-cream
+    - recipe-gourmet-walnut-and-raisin-strudel
+    - recipe-scriptables
+    - prefabs
+    - card-item
   m_SchemaTemplates: []
   m_GroupTemplateObjects:
   - {fileID: 11400000, guid: e9a0f2d9c0abbb44097706679c941769, type: 2}

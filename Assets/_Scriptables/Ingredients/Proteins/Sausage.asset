@@ -17,5 +17,4 @@ MonoBehaviour:
   _type: 1
   _category: 3
   _rarity: 1
-  _resourceKey: ingredient-
-  _proteinType: 12
+  _ingredientType: 411

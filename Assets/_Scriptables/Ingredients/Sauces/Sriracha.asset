@@ -17,5 +17,4 @@ MonoBehaviour:
   _type: 1
   _category: 6
   _rarity: 2
-  _resourceKey: ingredient-
-  _sauceType: 16
+  _ingredientType: 615

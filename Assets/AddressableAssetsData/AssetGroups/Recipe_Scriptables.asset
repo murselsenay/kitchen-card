@@ -1,0 +1,31 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bbb281ee3bf0b054c82ac2347e9e782c, type: 3}
+  m_Name: Recipe_Scriptables
+  m_EditorClassIdentifier: 
+  m_GroupName: Recipe_Scriptables
+  m_Data:
+    m_SerializedData: []
+  m_GUID: 265c544763f7d28499befebd7b9e5f8f
+  m_SerializeEntries:
+  - m_GUID: 49c786d13f36ed849a3d4552a8de1514
+    m_Address: Assets/_Scriptables/Recipes
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - recipe-scriptables
+    FlaggedDuringContentUpdateRestriction: 0
+  m_ReadOnly: 0
+  m_Settings: {fileID: 11400000, guid: 5b187456e50516e4cb3adbf6b649f950, type: 2}
+  m_SchemaSet:
+    m_Schemas:
+    - {fileID: 11400000, guid: 3e16a3c9070dd544ea84f2bffd659601, type: 2}
+    - {fileID: 11400000, guid: 0a3785b40e4dba1408df15e3d1d740d0, type: 2}

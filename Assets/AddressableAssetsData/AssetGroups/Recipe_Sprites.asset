@@ -1,0 +1,415 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bbb281ee3bf0b054c82ac2347e9e782c, type: 3}
+  m_Name: Recipe_Sprites
+  m_EditorClassIdentifier: 
+  m_GroupName: Recipe_Sprites
+  m_Data:
+    m_SerializedData: []
+  m_GUID: b5cc89f1fe7391248a3e0d40e093cb09
+  m_SerializeEntries:
+  - m_GUID: 05e7d4e510a13054a8c5819b0cf62ecb
+    m_Address: Buttery_Mushroom
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - recipe-buttery-mushroom
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 062f02f3e0a9c76448a0513bc9a81487
+    m_Address: Pasta_Bolognese
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - recipe-pasta-bolognese
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 0f98573f8ac68ad4fbc7bf5a7dd4c6ee
+    m_Address: Ultimate_Surf_Turf
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - recipe-ultimate-surf-and-turf
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 11a860d2017eb74468d2770c6023c8f6
+    m_Address: Seafood_Paella
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - recipe-seafood-paella
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 1290e49612b29b442974591b2be50d27
+    m_Address: Izmir_Kofta
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - recipe-izmir-kofta
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 18540bcf3d8a64a4d9cfad18619f2ce5
+    m_Address: Carror_Dip_Base
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - recipe-carrot-dip-base
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 1be26a6902d30de459fc975a458d6748
+    m_Address: Zucchini_Borani
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - recipe-zucchini-borani
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 1ec260633d2f0dc48bf9078a55360be1
+    m_Address: Lava Cake
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - recipe-lava-cake
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 26f83c44a7ddc444a9c1a76a3c91fdb2
+    m_Address: Exotic Coconut Lime Cream
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - recipe-exotic-coconut-lime-cream
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 2754d7a09001e174ab1430905654017a
+    m_Address: Gourmet_Margherita
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - recipe-gourmet-margherita
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 2c3ccfd064b49ea41b37aa017105a4e5
+    m_Address: Beef_Stroganoff
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - recipe-beef-stroganoff
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 31381d0fd6005c749b13d8aa532a6596
+    m_Address: Steak_Sandwich
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - recipe-steak-sandwich
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 3637fc02e6a50eb4cbfa24c2c171dd15
+    m_Address: Chicken_Rice
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - recipe-chicken-and-rice
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 386cca70690887849b7078c56f6f0bca
+    m_Address: Hunkar_Begendi
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - recipe-hunkar-begendi
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 44c66930cd593a840988b89305e0151e
+    m_Address: Pad_Thai
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - recipe-pad-thai
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 476716b46ff883d49a4bfdc544c1cef3
+    m_Address: Baked_Salmon_Plate
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - recipe-baked-salmon-plate
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 4ad5b01a7ba4c5546a353f5aeb82866f
+    m_Address: Creamy_Mushroom_Steak
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - recipe-creamy-mushroom-steak
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 5375e3d80b502ae47b98e72aaf61ac17
+    m_Address: Asian_Salmon_Bowl
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - recipe-asian-salmon-bowl
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 5393990dd2e5f284089ff4bf709618ff
+    m_Address: Chickpea_Rice
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - recipe-chickpea-rice
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 564ef5020c39187479cb966980563523
+    m_Address: Hawaiian BBQ Feast
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - recipe-hawaiian-bbq-feast
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 58ad1b2d8b669b248a1b4b800af0f776
+    m_Address: Garlic_Shrimp_Sizzler
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - recipe-garlic-shrimp-sizzler
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 639eced4b1e9e1748a4589a87ce60f69
+    m_Address: Pizza
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - recipe-mixed-pizza
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 68c77ef608f53c04f9bd28f89866abce
+    m_Address: Sauteed_Meat
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - recipe-sauteed-meat
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 7c108035f4ed13d45abc7fcb59f1ea0a
+    m_Address: Meaty_Bean_Stew
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - recipe-meaty-bean-stew
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 7d4553a32824963429f46e036e2a3ec6
+    m_Address: Tomato_Bruschetta
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - recipe-tomato-bruscetta
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 7dc6fb69110ecbd43b2a815355050ef1
+    m_Address: Anatolian Lamb Hummus
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - recipe-anatolian-lamb-hummus
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 831e9116ae8ee0746ad07a9eb04d8470
+    m_Address: Breakfast_Plate
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - recipe-breakfast-plate
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 8613c401b1cec2546bcb56c766a909a6
+    m_Address: Pasta_Carbonara
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - recipe-pasta-carbonara
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 901410744d861fa478c648320a668593
+    m_Address: Philly_Cheesesteak
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - recipe-philly-cheesesteak
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 91271cce7ef6a184e8866b303dc46f89
+    m_Address: French_Bouillabaisse
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - recipe-french-bouillabaisse
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 9163b74a107277147a146816b0d9e10b
+    m_Address: Chicken_Volauvent
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - recipe-chicken-volauvent
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 919248e90b4527246922a336ff13dc94
+    m_Address: Menemen
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - recipe-menemen
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 9c112fb3eaef8164991212f07fb58eaa
+    m_Address: Mashed_Potatoes
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - recipe-mashed-potatoes
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 9e6f1b86e77b9524c98617beafbecfb7
+    m_Address: Quick_Chicken_Curry
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - recipe-quick-chicken-curry
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: a159d6c9a191dd34997b11165b527ccf
+    m_Address: Lobster_Thermidor
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - recipe-lobster-thermidor
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: a6e38d9c14f4a7b4395b3e81bb3191d1
+    m_Address: Shakshuka
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - recipe-shakshuka
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: a7ac4ad40d88e9b4bbc8b04fb8d81528
+    m_Address: Orange_Duck
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - recipe-orange-duck
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: aac309a73368d5e49a80ca8154f62e00
+    m_Address: Hungarian_Goulash
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - recipe-hungarian-gulash
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: ac746d18d4c0ee7458a0a33652998c59
+    m_Address: Sultans_Feast_Rice
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - recipe-sultans-feast-rice
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: b45925c945eafb049b645efcee386f39
+    m_Address: Steak_And_Chips
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - recipe-steak-and-chips
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: b4b96289f2bd4b54db8c3f5cec07a00e
+    m_Address: Classic_Fries
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - recipe-classic-fries
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: b7814b3a0c2f2f847958f588ceb5cccb
+    m_Address: Bibimbap
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - recipe-bibimbap
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: b8c86de5381067841ac7d2082382a4d3
+    m_Address: Lahmacun
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - recipe-lahmacun
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: c0c9cc3de168d8247a05847dcd55a7b6
+    m_Address: Mexican_Fiesta_Platter
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - recipe-mexican-fiesta-platter
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: c2f70a476a579634aa2e53d4a9f68d52
+    m_Address: Shepherds_Pie
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - recipe-shepherds-pie
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: c3ba2d65d1a1fbb42a4bcf93c9fd456d
+    m_Address: Aromatic Rice Pudding
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - recipe-aromatic-rice-pudding
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: c65ffe9f9da1b6e49bf020ece35304b7
+    m_Address: Beef_Wellington
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - recipe-beef-wellington
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: c81165989fb69334cb82487227b0d053
+    m_Address: Eggplant_Kebab
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - recipe-eggplant-kebap
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: ca11f55d80cc2264cbf962dec07d2d74
+    m_Address: Vegetable_Chicken_Rice
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - recipe-vegetable-chicken-rice
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: cc4bb1b0f4da7f5419f0cf2e763f1969
+    m_Address: Zesty Yogurt Parfait
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - recipe-zesty-yogurt-parfait
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: cddca226137ccb0449ea63565b2c2bd5
+    m_Address: Creamy_Spinach_Salmon
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - recipe-creamy-spinach-salmon
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: d04908a06a28605468959c3e365b1d71
+    m_Address: Vegetable_Lamb_Stew
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - recipe-vegetable-lamb-stew
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: d24cf63c9bdd23e498cb4fc5b8ab5d50
+    m_Address: Nordic_Gourmet_Salmon
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - recipe-nordic-gourmet-salmon
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: d2f37e57cabdcc340b1fe554f621cc4a
+    m_Address: Roasted_Eggplant
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - recipe-roasted-eggplant
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: d6b795ec3c147cb4fb6f8039f94ad807
+    m_Address: Spicy Sriracha Salmon Tataki
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - recipe-spicy-sriracha-salmon-tataki
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: d6fe1a29af775d54c84ad98081ec2b9a
+    m_Address: Roasted Duck with Demi-Glace
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - recipe-roasted-duck-with-demi-glace
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: d7e2ecdd3c15fbb40a80b3d643660065
+    m_Address: Sushi_Platter
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - recipe-sushi-platter
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: df4bd8c5384a4d742bf25448cd3de5e1
+    m_Address: Mediterranean_Fish_Stew
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - recipe-mediterranean-fish-stew
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: e010c4f1e032b1b4cad5977c2b238f21
+    m_Address: Cured_Salmon
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - recipe-cured-salmon
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: ed0d2eb3a461a4b40b3b479fc16ba515
+    m_Address: Chicken_Fajitas
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - recipe-chicken-fajitas
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: ed447e0e0cff30f45829bbc112668d69
+    m_Address: Classic_Lasagna
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - recipe-classic-lasagna
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: f0336f025b63afe459fa0c7518f07972
+    m_Address: Gourmet Walnut and Raisin Strudel
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - recipe-gourmet-walnut-and-raisin-strudel
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: f6e24e7feb964944586027be46c76d48
+    m_Address: Moussaka
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - recipe-moussaka
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: fa53c2beddd2fac418f17a82a9823cc7
+    m_Address: Argentinian Chimichurri Steak
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - recipe-argentinian-chimichurri
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: fe10851a90f41bf47b9243ea65051c8d
+    m_Address: Thyme Lamb
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - recipe-thyme-lamb
+    FlaggedDuringContentUpdateRestriction: 0
+  m_ReadOnly: 0
+  m_Settings: {fileID: 11400000, guid: 5b187456e50516e4cb3adbf6b649f950, type: 2}
+  m_SchemaSet:
+    m_Schemas:
+    - {fileID: 11400000, guid: ef103006145a2464285dae8b6feff906, type: 2}
+    - {fileID: 11400000, guid: 15789ed34b31f9644bc59cfe949f19f6, type: 2}

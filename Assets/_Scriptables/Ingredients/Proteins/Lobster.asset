@@ -17,5 +17,4 @@ MonoBehaviour:
   _type: 1
   _category: 3
   _rarity: 3
-  _resourceKey: ingredient-
-  _proteinType: 8
+  _ingredientType: 407

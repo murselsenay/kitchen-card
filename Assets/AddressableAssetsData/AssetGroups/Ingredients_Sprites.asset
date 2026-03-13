@@ -1,0 +1,802 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bbb281ee3bf0b054c82ac2347e9e782c, type: 3}
+  m_Name: Ingredients_Sprites
+  m_EditorClassIdentifier: 
+  m_GroupName: Ingredients_Sprites
+  m_Data:
+    m_SerializedData: []
+  m_GUID: 186225ed706d27e4db44f9ca4436b8c0
+  m_SerializeEntries:
+  - m_GUID: 01395c31f9dd5fc4da5ba58b840cd36b
+    m_Address: Mexican_Beans
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - ingredient-mexican-beans
+    - pantry
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 01446905227cca540a86dfbbb7f9264f
+    m_Address: Olive_Oil
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - ingredient-olive-oil
+    - pantry
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 04a8ab1b5ebf73044b1627c9cac05b03
+    m_Address: Parsley
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - ingredient-parsley
+    - vegetable
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 04e53ff465eeda94abd707d6e8ed25f9
+    m_Address: Baking_Powder
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - ingredient-baking-powder
+    - pantry
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 07969a090625dd34d9fef487aa7f98d5
+    m_Address: Dough
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - ingredient-dough
+    - pantry
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 083a153f8019c364daeef53253a2e2b8
+    m_Address: Peas
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - ingredient-peas
+    - vegetable
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 0b99b08783aa7674fa49c32770a0e89d
+    m_Address: Walnut
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - ingredient-walnuts
+    - pantry
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 0be46f9efef363d428a159ad9dadf92e
+    m_Address: Tahini
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - ingredient-tahini
+    - sause
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 0f0e41105b5e0ec4d831b4bc8c89202b
+    m_Address: Nori
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - ingredient-nori
+    - pantry
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 11078710c5b534a44a875f2eca9919fc
+    m_Address: Basil
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - ingredient-basil
+    - vegetable
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 118a57949c8b54449869fd117c89cbfc
+    m_Address: Green_Thyme
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - ingredient-green-thyme
+    - spice
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 134fccf8ef190384d8a7155e974adf27
+    m_Address: Eggplant
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - ingredient-eggplant
+    - vegetable
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 148757c0761acf04a8db2e482157011f
+    m_Address: Basic_Sauce
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - ingredient-basic-sauce
+    - sause
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 176e04094bba1924fbb338d9abae7c50
+    m_Address: Sesame
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - ingredient-sesame
+    - pantry
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 18b1819ce43638747895d567adcab2ff
+    m_Address: Egg
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - ingredient-egg
+    - protein
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 1c9531c6e5ecca54ba294b960c55bc40
+    m_Address: Butter
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - ingredient-butter
+    - pantry
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 1dd01d2a97a60994899bc80f0fdd5ad0
+    m_Address: Red_Pepper
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - ingredient-red-pepper
+    - vegetable
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 20626b44b7dd8a145855ca617335fed0
+    m_Address: Zuchini
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - ingredient-zucchini
+    - vegetable
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 20a1cfd0a7822ba4f91febc9ffc21d34
+    m_Address: Hollandaise
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - ingredient-hollandaise
+    - sause
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 28026dc03c28abe449169eb195851523
+    m_Address: Turmeric
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - ingredient-turmeric
+    - spice
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 29266455869a2e54ab3f25be181a8f89
+    m_Address: Noodle
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - ingredient-noodle
+    - pantry
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 2a408d80bea675f48a462d050198d368
+    m_Address: Garlic
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - ingredient-garlic
+    - vegetable
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 2b43f6cf3c846c64793a034b500bbb09
+    m_Address: Potato
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - ingredient-potato
+    - vegetable
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 2e99fc3d7661ea94e920a83dddc9f7fc
+    m_Address: Hot_Sauce
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - ingredient-hot-sauce
+    - sause
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 31fb152b3e6a6b343a33ecf9d245a098
+    m_Address: Rice
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - ingredient-rice
+    - pantry
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 324289518bef510468f68dbd816b139b
+    m_Address: Lobster
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - ingredient-lobster
+    - protein
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 355f1e08ab2f94748872cbc6421a3952
+    m_Address: Onion
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - ingredient-onion
+    - vegetable
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 396ec3122056c5f42920e411c615e2d0
+    m_Address: Mayonnaise
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - ingredient-mayonnaise
+    - sause
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 3f0df932b74d951468c6936afacc960b
+    m_Address: Lettuce
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - ingredient-lettuce
+    - vegetable
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 4201b9692cb05d74d976373254288092
+    m_Address: Somon
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - ingredient-salmon
+    - protein
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 4290d1ca3e2260840808170f84a02d18
+    m_Address: Pineapple
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - fruit
+    - ingredient-pineapple
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 46b7576124181ac44946aff9f09e3edd
+    m_Address: Tomato
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - ingredient-tomato
+    - vegetable
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 4725b5af58213974cbd347e1f2fee66f
+    m_Address: Chocolatte
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - ingredient-chocolatte
+    - pantry
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 4eed851adfd14bb4b8b8e8797f4a0080
+    m_Address: Lime
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - fruit
+    - ingredient-lime
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 4fb977fe48ca59f44b22acdfcc2ea18a
+    m_Address: Bread
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - ingredient-bread
+    - pantry
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 546e404014f39144f9762062824209b5
+    m_Address: Lamb
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - ingredient-lamb
+    - protein
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 54b93b72d0a80e340b432973ee14dc53
+    m_Address: Sumac
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - ingredient-sumac
+    - spice
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 55bd8e8d7ff61144287b0f3b269f4759
+    m_Address: Ground_Beef
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - ingredient-ground-beef
+    - protein
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 59b5574b138cf474bb0d4912bab6a588
+    m_Address: Avacado
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - fruit
+    - ingredient-avocado
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 61f6e168264d75546afb641c8318f986
+    m_Address: Lemon
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - fruit
+    - ingredient-lemon
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 625d83163c948164e87c7d3f995b93e0
+    m_Address: Cheddar
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - ingredient-cheddar
+    - pantry
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 62b5c5c2a35a2a049a03f14e36c7f057
+    m_Address: Fish
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - ingredient-fish
+    - protein
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 65919cb4d15e34d4184c6470230a39e2
+    m_Address: Tofu
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - ingredient-tofu
+    - protein
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 67bf39283958f3e49af25d3955ccb0fa
+    m_Address: Nuts
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - ingredient-chickpea
+    - pantry
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 6910dc1efecec984fb1d800fa141ab95
+    m_Address: Peanut
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - ingredient-peanuts
+    - pantry
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 6afd7e1c5d2392d44b5f290075291a90
+    m_Address: Cinnamon
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - ingredient-cinnamon
+    - spice
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 6c00046492a41b64189fffe2c134f6be
+    m_Address: Shrimp
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - ingredient-shrimp
+    - protein
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 6d4c084d99ec04047bcd8ab84e7e71e6
+    m_Address: Spinach
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - ingredient-spinach
+    - vegetable
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 6f9114d8038191a4b8bb893dc65638d1
+    m_Address: Mushroom
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - ingredient-mushroom
+    - vegetable
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 6ff7002ba205c3f40b5abbf6d9bccbba
+    m_Address: Pepperoni
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - ingredient-pepperoni
+    - protein
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 73301f6bfa6226a45bd184c0140a3056
+    m_Address: Yogurt
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - ingredient-yogurt
+    - pantry
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 751c7d686700f564eaa2def7a9827632
+    m_Address: Cheese
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - ingredient-cheese
+    - pantry
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 7697f28af1bcdd248a7fcf213d777579
+    m_Address: Mint
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - ingredient-mint
+    - spice
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 76abd9e5cbd34d54b877f90771543be6
+    m_Address: Orange
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - fruit
+    - ingredient-orange
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 7b9b089c298624a47a3113f1579df3c9
+    m_Address: Ginger
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - ingredient-ginger
+    - spice
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 7cda76cf614cf904589058c4a2267ac4
+    m_Address: Raisins
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - ingredient-raisins
+    - pantry
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 81cc29ac356ce4748a3569f6ad987b5d
+    m_Address: Sugar
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - ingredient-sugar
+    - pantry
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 845bd5e1c296e184ca0eb042bd835376
+    m_Address: Black_Pepper
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - ingredient-black-pepper
+    - spice
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 85ddfbf2b2c64d146a43704bce798eca
+    m_Address: Yeast
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - ingredient-dry-yeast
+    - pantry
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 867de283674e31b498b6ba0c310571de
+    m_Address: Wheat
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - ingredient-wheat
+    - pantry
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 8a65f5481ca19ec4e9e63961e9dcebb8
+    m_Address: Tuna
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - ingredient-tuna
+    - protein
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 8a9907fd12c69da4f854d042ac9c0c36
+    m_Address: Beef_Stock
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - ingredient-beef-stock
+    - pantry
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 8ea65416730ecb945b5aa2dd4540dc2c
+    m_Address: Flour
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - ingredient-flour
+    - pantry
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 9314ecf646f1a2641bf9a6a0724cfd24
+    m_Address: Saffron
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - ingredient-saffron
+    - spice
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 95a74ced3ed66d141a1f8e3ededc3617
+    m_Address: Pasta
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - ingredient-pasta
+    - pantry
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 9c9371326b7be25479056d18c7d02cc1
+    m_Address: Tortilla
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - ingredient-tortilla
+    - pantry
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 9e84aa6ad12e6684489e0c8685fca5e6
+    m_Address: Bacon
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - ingredient-bacon
+    - protein
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 9ebf9a11fafb82247a887422a0a37b95
+    m_Address: Carrot
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - ingredient-carrot
+    - vegetable
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 9f76dc8e38f5f9849b2caf21281cbc9d
+    m_Address: Vinegar
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - ingredient-vinegar
+    - pantry
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 9fe0d877200738b41a6e0df5c744165b
+    m_Address: Bean_Sprout
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - ingredient-bean-sprout
+    - pantry
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: a04e6719e1d7f2c439d6940802abdbb5
+    m_Address: Asparagus
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - ingredient-asparagus
+    - vegetable
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: a7ef1fccf67fc344d82fff80500ce478
+    m_Address: Honey
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - ingredient-honey
+    - sause
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: a9c846c492e012b42ad2406f760d4ed3
+    m_Address: Wasabi
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - ingredient-wasabi
+    - sause
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: aa525ccf9bbe8154fbbf978d01fad864
+    m_Address: Soy_Sauce
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - ingredient-soy-sauce
+    - sause
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: abb84c430058d4f4aaa0341442712a98
+    m_Address: Sherry
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - ingredient-sherry
+    - sause
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: b0529606054ecda4bb075c168431cdaf
+    m_Address: Puff_Pastry
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - ingredient-puff-pastry
+    - pantry
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: b0f21993fee408a40bb8c93ef86e9dda
+    m_Address: Coconut_Milk
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - ingredient-coconut-milk
+    - pantry
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: b11842f9d5a673344a749098baa33e74
+    m_Address: Ketchup
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - ingredient-ketchup
+    - sause
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: b20075d332050de40b10d58611116df4
+    m_Address: Gochujang
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - ingredient-gochujang
+    - sause
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: b3cd8881ec451644da12534e718711f3
+    m_Address: Sriracha
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - ingredient-sriracha
+    - sause
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: b6c9ffb2710a9d849848b1bfb6bfa79e
+    m_Address: Almonds
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - ingredient-almonds
+    - pantry
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: b86790525a8d089499e85a6bd9073ee4
+    m_Address: Mustard
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - ingredient-mustard
+    - sause
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: b8f84fba600694941aa84fcd8a43c85a
+    m_Address: Dill
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - ingredient-dill
+    - vegetable
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: bb577a1c8b4e28a408ac8b025b257f08
+    m_Address: Demi_Glace
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - ingredient-demi-glace
+    - sause
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: bb59541b7800b5e4ea96342beb1071e6
+    m_Address: Bechamel_Sauce
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - ingredient-bechamel
+    - sause
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: bdd5eff8c25f2cd42895d481101ce162
+    m_Address: Corn
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - ingredient-corn
+    - vegetable
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: bfc74830ba91a324f8f3a3a96045249f
+    m_Address: Chimichurri
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - ingredient-chimichurri
+    - sause
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: c09f98304e69c4545be1d4e7df6dc44e
+    m_Address: Capers
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - ingredient-capers
+    - vegetable
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: c3814301d82e1734aa93fbf96e50f42c
+    m_Address: Cumin_Powder
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - ingredient-cumin-powder
+    - spice
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: c4a91df1e3dbb454886568741157401a
+    m_Address: Chicken
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - ingredient-chicken
+    - protein
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: c5405bbe843e611459883244341d0016
+    m_Address: Heavy_Cream
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - ingredient-heavy-cream
+    - pantry
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: cda72858d774fb0479ea54011e255302
+    m_Address: Olives
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - ingredient-olives
+    - pantry
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: d32bd88d3f26823428e8d1eaecf30f15
+    m_Address: Balzamic_Glaze
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - ingredient-balzamic-glaze
+    - sause
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: d696ea9f53c6bfa428580f75670d73ca
+    m_Address: Pickles
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - ingredient-pickles
+    - pantry
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: d8296b5e67463b34093cb3515aba3525
+    m_Address: Salt
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - ingredient-salt
+    - spice
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: d9faa789eff0b4b4ab1dade9511111e6
+    m_Address: Steak
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - ingredient-steak
+    - protein
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: da52a718d083274468cbf768f06617f4
+    m_Address: Duck
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - ingredient-duck
+    - protein
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: db95a9e63dbabf948aa6ace0710643d6
+    m_Address: Dry_Oats
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - ingredient-dry-oats
+    - pantry
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: dde766d22d842c145aa89bc16429b78f
+    m_Address: Vanilla_Stick
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - ingredient-vanilla-stick
+    - spice
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: de0b30c316429a345b6b03ea36c420f7
+    m_Address: Tomato_Paste
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - ingredient-tomato-paste
+    - pantry
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: de0f44dee9175cf4ea25f998e2a673c3
+    m_Address: Curry
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - ingredient-curry
+    - spice
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: de35eae4ea36583499ae11d201aa4d0e
+    m_Address: Milk
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - ingredient-milk
+    - pantry
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: df60f7cbd2964c84b84ac4ec9c69b286
+    m_Address: Mussels
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - ingredient-mussels
+    - protein
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: e0b5b49903700f9408bfb0c19dc116e1
+    m_Address: Mozarella
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - ingredient-mozarella
+    - pantry
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: e56bd7ed7b6f92343b4cc9a014e4f6be
+    m_Address: Sausage
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - ingredient-sausage
+    - protein
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: e57f7dc682c7953419438f68c1891e01
+    m_Address: Beans
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - ingredient-beans
+    - pantry
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: e90c0ba2c994c90429c88a747b06e172
+    m_Address: Powder_Pepper
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - ingredient-powder-pepper
+    - spice
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: efbba07904b7bb648aeb6631292bd81a
+    m_Address: Bay_Leaves
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - ingredient-bay-leaves
+    - spice
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: f34f5a595a7176d438354a82d1d18316
+    m_Address: Green_Pepper
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - ingredient-green-pepper
+    - vegetable
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: fec10b18e15c6f844a47b8946535b937
+    m_Address: BBQ
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - ingredient-bbq
+    - sause
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: ff22a0a78d0ab704399b1e8516d7e97c
+    m_Address: Rosemary
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - ingredient-rosemary
+    - spice
+    FlaggedDuringContentUpdateRestriction: 0
+  m_ReadOnly: 0
+  m_Settings: {fileID: 11400000, guid: 5b187456e50516e4cb3adbf6b649f950, type: 2}
+  m_SchemaSet:
+    m_Schemas:
+    - {fileID: 11400000, guid: 28935a79a78bcf14d9918ab6702e0f53, type: 2}
+    - {fileID: 11400000, guid: 8cbbd336909d2c540bf7544941ee8a8c, type: 2}

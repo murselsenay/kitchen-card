@@ -1,0 +1,66 @@
+Name,Category,Ingredients,Local,Gourmet,Signature
+Tomato Bruscetta,2x,"Tomato, Bread",2,0,0
+Classic Fries,2x,"Potato, Salt",2,0,0
+Roasted Eggplant,2x,"Eggplant, Olive Oil",1,1,0
+Buttery Mushroom,2x,"Mushroom, Butter",1,1,0
+Thyme Lamb,2x,"Lamb, Green Thyme",2,0,0
+Breakfast Plate,2x,"Egg, Sausage",2,0,0
+Steak Sandwich,2x,"Steak, Bread",1,1,0
+Carrot Dip Base,2x,"Carrot, Olive Oil",1,1,0
+Cured Salmon,2x,"Salmon, Dill",0,2,0
+Quick Chicken Curry,2x,"Chicken, Curry",2,0,0
+Steak And Chips,3x,"Steak, Potato, Salt",2,1,0
+Chicken and Rice,3x,"Rice, Black Pepper, Chicken",3,0,0
+Baked Salmon Plate,3x,"Salmon, Potato, Asparagus",1,1,1
+Sauteed Meat,3x,"Ground Beef, Onion, Red Pepper",3,0,0
+Menemen,3x,"Egg, Tomato, Green Pepper",3,0,0
+Pasta Bolognese,3x,"Tomato Paste, Ground Beef, Tomato",3,0,0
+Mashed Potatoes,3x,"Potato, Butter, Milk",3,0,0
+Chickpea Rice,3x,"Chickpea, Rice, Butter",3,0,0
+Zucchini Borani,3x,"Zucchini, Yogurt, Garlic",2,1,0
+Eggplant Kebap,3x,"Eggplant, Lamb, Tomato",3,0,0
+Creamy Mushroom Steak,4x,"Steak, Mushroom, Heavy Cream, Black Pepper",1,3,0
+Vegetable Chicken Rice,4x,"Chicken, Rice, Peas, Carrot",3,1,0
+Moussaka,4x,"Ground Beef, Potato, Eggplant, Bechamel",4,0,0
+Creamy Spinach Salmon,4x,"Salmon, Spinach, Heavy Cream, Garlic",1,3,0
+Meaty Bean Stew,4x,"Lamb, Onion, Tomato Paste, Cumin Powder",3,1,0
+Pasta Carbonara,4x,"Egg, Cheese, Pasta, Bacon",4,0,0
+Garlic Shrimp Sizzler,4x,"Shrimp, Garlic, Butter, Red Pepper",3,1,0
+Izmir Kofta,4x,"Ground Beef, Potato, Tomato, Green Pepper",4,0,0
+Chicken Fajitas,4x,"Chicken, Red Pepper, Tortilla, Onion",3,1,0
+Mixed Pizza,4x,"Dough, Mozarella, Tomato, Pepperoni",2,2,0
+Hungarian Gulash,5x,"Steak, Potato, Carrot, Peas, Tomato",3,2,0
+Hunkar Begendi,5x,"Lamb, Eggplant, Butter, Flour, Milk",5,0,0
+Asian Salmon Bowl,5x,"Salmon, Rice, Ginger, Soy sauce, Sesame",3,2,0
+Chicken Volauvent,5x,"Chicken, Puff Pastry, Mushroom, Heavy Cream, Peas",1,3,1
+Classic Lasagna,5x,"Ground Beef, Pasta, Onion, Tomato, Cheese",5,0,0
+Philly Cheesesteak,5x,"Steak, Onion, Green Pepper, Mushroom, Cheese",3,2,0
+Orange Duck,5x,"Duck, Orange, Honey, Ginger, Potato",2,2,1
+Mediterranean Fish Stew,5x,"Fish, Tomato, Olives, Capers, Potato",4,0,1
+Seafood Paella,5x,"Rice, Shrimp, Saffron, Peas, Mussels",1,2,2
+Lahmacun,5x,"Dough, Ground Beef, Onion, Tomato, Parsley",4,0,1
+Ultimate Surf And Turf,6x,"Steak, Salmon, Shrimp, Potato, Asparagus, Corn",2,3,1
+Sultans Feast Rice,6x,"Lamb, Rice, Chickpea, Saffron, Almonds, Raisins",3,0,3
+Beef Wellington,6x,"Steak, Puff Pastry, Mushroom, Mustard, Egg, Spinach",2,3,1
+Mexican Fiesta Platter,6x,"Chicken, Corn, Mexican Beans, Avocado, Lime, Tortilla",2,3,1
+Shepherds Pie,6x,"Ground Beef, Potato, Carrot, Onion, Peas, Beef Stock",4,1,1
+French Bouillabaisse,6x,"Fish, Shrimp, Mussels, Tomato, Saffron, Garlic",3,1,2
+Nordic Gourmet Salmon,6x,"Salmon, Potato, Heavy Cream, Lemon, Dill, Capers",2,3,1
+Beef Stroganoff,6x,"Steak, Onion, Mushroom, Pickles, Heavy Cream, Pasta",3,3,0
+Gourmet Margherita,6x,"Dough, Tomato, Mozarella, Basil, Olive Oil, Garlic",3,3,0
+Vegetable Lamb Stew,6x,"Lamb, Green Pepper, Tomato, Eggplant, Garlic",5,0,0
+Shakshuka,Unique,"Tomato, Egg, Green Pepper, Onion, Parsley",4,0,1
+Sushi Platter,Unique,"Rice, Salmon, Ginger, Wasabi, Tuna, Nori",1,4,1
+Pad Thai,Unique,"Peanuts, Noodle, Shrimp, Bean Sprout, Tofu, Lime",0,4,2
+Bibimbap,Unique,"Rice, Green Pepper, Carrot, Spinach, Gochujang, Egg",4,1,1
+Lobster Thermidor,Unique,"Lobster, Cheese, Sherry, Mustard, Heavy Cream, Egg",3,1,2
+Roasted Duck with Demi Glace,Unique,"Duck, Butter, Demi Glace, Bay Leaves, Rosemary, Potato",2,2,2
+Hawaiian BBQ Feast,Unique,"Mozarella, Pineapple, Green Pepper, Bacon, BBQ, Chicken",4,2,0
+Spicy Sriracha Salmon Tataki,Unique,"Sriracha, Sesame, Soy sauce, Mayonnaise, Ginger, Salmon",3,3,0
+Anatolian Lamb Hummus,Unique,"Parsley, Butter, Tahini, Sumac, Chickpea, Lamb",4,0,2
+Argentinian Chimichurri,Unique,"Hot sauce, Steak, Garlic, Red Pepper, Lettuce, Chimichurri",4,1,1
+Lava Cake,Desert,"Butter, Flour, Chocolatte, Sugar, Egg",4,1,0
+Aromatic Rice Pudding,Desert,"Cinnamon, Vanilla Stick, Milk, Sugar, Rice",3,2,0
+Zesty Yogurt Parfait,Desert,"Orange, Yogurt, Honey, Mint, Walnuts",2,3,0
+Exotic Coconut Lime Cream,Desert,"Lime, Vanilla Stick, Mint, Heavy Cream, Coconut Milk, Sugar",2,3,1
+Gourmet Walnut and Raisin Strudel,Desert,"Raisins, Puff Pastry, Butter, Honey, Cinnamon, Walnuts",1,3,2

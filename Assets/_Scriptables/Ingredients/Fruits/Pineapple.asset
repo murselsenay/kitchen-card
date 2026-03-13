@@ -17,5 +17,4 @@ MonoBehaviour:
   _type: 1
   _category: 2
   _rarity: 2
-  _resourceKey: ingredient-
-  _fruitType: 5
+  _ingredientType: 304
