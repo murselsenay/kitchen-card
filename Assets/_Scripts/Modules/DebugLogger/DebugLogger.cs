@@ -38,6 +38,18 @@ namespace Modules.Logger
             Log(message);
         }
 
+        public static void LogWarningFormat(string format, params object[] args)
+        {
+            string message = string.Format(format, args);
+            LogWarning(message);
+        }
+
+        public static void LogErrorFormat(string format, params object[] args)
+        {
+            string message = string.Format(format, args);
+            LogError(message);
+        }
+
         private static string GetHeaderFromFilePath(string filePath)
         {
             if (string.IsNullOrEmpty(filePath))

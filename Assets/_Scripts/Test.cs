@@ -1,17 +1,14 @@
 using Modules.AdressableSystem;
-using Modules.Game.Components;
-using Modules.Game.Constants;
-using Modules.Game.Managers;
-using Modules.Game.Scriptables.Card;
+using Game.Controllers;
+using Game.Core.Constants;
+using Game.Models.Cards;
+using Game.Views;
 using Modules.Logger;
-using Modules.ObjectPoolSystem;
 using NaughtyAttributes;
-using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
-using static UnityEditor.Progress;
 
 public class Test : MonoBehaviour
 {
@@ -21,15 +18,15 @@ public class Test : MonoBehaviour
     private List<CardItem> _cardItems = new List<CardItem>();
     async void Start()
     {
-        await CardManager.Init();
-        await RecipeManager.Init();
-        await StageManager.Init();
-        await DeckManager.Init();
+        await CardController.Init();
+        await RecipeController.Init();
+        await StageController.Init();
+        await DeckController.Init();
     }
 
     private void SetPossibleRecipe(List<CardScriptable> handCards)
     {
-        var recipes = DeckManager.EvaluateCardsWithRecipe(handCards);
+        var recipes = DeckController.EvaluateCardsWithRecipe(handCards);
 
         _recipeTypeText.text = string.Empty;
 
@@ -53,15 +50,15 @@ public class Test : MonoBehaviour
     {
         _cardHolder.gameObject.SetActive(false);
 
-        DeckManager.GetSelectedCards().Clear();
+        DeckController.GetSelectedCards().Clear();
 
         foreach (var cardItem in _cardItems)
         {
-            AddressableManager.Release(cardItem.gameObject);
+            AddressableManager.ReleaseInstance(cardItem.gameObject);
         }
         _cardItems.Clear();
 
-        var handCards = DeckManager.CreateTestHand();
+        var handCards = DeckController.CreateTestHand();
 
         SetPossibleRecipe(handCards);
 
@@ -82,13 +79,13 @@ public class Test : MonoBehaviour
     [Button]
     public async void SendHand()
     {
-        var selectedCards = DeckManager.GetSelectedCards();
+        var selectedCards = DeckController.GetSelectedCards();
 
         DebugLogger.Log("Selected Cards" + selectedCards.Count);
 
         foreach (var item in selectedCards)
         {
-            var randomCard = DeckManager.GetRandomCard(item.GetCardCategory(), _cardItems.ConvertAll(x => x.CardScriptable));
+            var randomCard = DeckController.GetRandomCard(item.GetCardCategory(), _cardItems.ConvertAll(x => x.CardScriptable));
             var sentCard = _cardItems.Find(x => x.CardScriptable.GetIngredientType() == item.GetIngredientType());
             sentCard.gameObject.SetActive(false);
             var cardItem = await AddressableManager.InstantiateAsync<CardItem>(GameConstants.CARD_ITEM_SCRIPTABLE_ADDRESSABLE_KEY, _cardHolder);
@@ -106,9 +103,9 @@ public class Test : MonoBehaviour
         }
         foreach (var item in selectedItems)
         {
-            AddressableManager.Release(item);
+            AddressableManager.ReleaseInstance(item);
         }
-        DeckManager.GetSelectedCards().Clear();
+        DeckController.GetSelectedCards().Clear();
 
         SetPossibleRecipe(_cardItems.ConvertAll(x => x.CardScriptable));
     }
