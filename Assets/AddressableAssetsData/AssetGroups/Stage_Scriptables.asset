@@ -18,7 +18,7 @@ MonoBehaviour:
   m_GUID: 1742303d399c17a4e96ecf06fb336c13
   m_SerializeEntries:
   - m_GUID: 56bdf7b651656564bb067693fe0a4411
-    m_Address: Assets/_Scriptables/Stages
+    m_Address: Stages
     m_ReadOnly: 0
     m_SerializedLabels:
     - stage-scriptables

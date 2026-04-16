@@ -5,7 +5,7 @@ namespace Game.Models.Cards
 {
     [CreateAssetMenu(menuName = GameConstants.CARD_SCRIPTABLE_PATH + nameof(ProteinScriptable), fileName = nameof(ProteinScriptable))]
 
-    public class ProteinScriptable : CardScriptable
+    public class ProteinScriptable : IngredientScriptable
     {
         public override string GetResourceKey() => $"{GetCardType().ToString().ToLower()}-{GetIngredientType().ToString().Replace("_", "-").ToLower()}";
     }

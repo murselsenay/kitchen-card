@@ -5,6 +5,7 @@ using Game.Core.Constants;
 using Game.Core.Enums;
 using Game.Core.Extensions;
 using Game.Models.Cards;
+using Game.Models.Scoring;
 using NaughtyAttributes;
 using System.Collections.Generic;
 using System.Linq;
@@ -28,6 +29,7 @@ namespace Game.Models.Recipes
         public List<EIngredientType> GetIngredients() => _ingredients;
         public virtual string GetResourceKey() => $"{_recipeType.ToString().ToLower()}";
         public int GetTotalWeight() => GameConstants.RARITY_WEIGHTS[GetRarity()];
+        public int GetPoint() => ScoringConfig.Instance.GetRecipePoints(this);
         public async UniTask<Sprite> GetSprite() => await AddressableManager.LoadAsync<Sprite>(GetResourceKey());
         public ERarity GetRarity()
         {

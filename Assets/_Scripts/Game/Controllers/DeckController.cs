@@ -1,6 +1,5 @@
 using Cysharp.Threading.Tasks;
 using Modules.Event.Managers;
-using Game.Core.Constants;
 using Game.Core.Enums;
 using Game.Core.Events;
 using Game.Models.Cards;
@@ -13,33 +12,49 @@ namespace Game.Controllers
 {
     public static class DeckController
     {
-        private static List<CardScriptable> _deck;
-        private static List<CardScriptable> _selectedCards;
+        private static List<IngredientScriptable> _deck;
+        private static bool _isSubscribed;
+
         public static async UniTask Init()
         {
-            await CreateDeck();
-
             EventSubscribe();
+
+            if (StageController.GetCurrentRound() != null)
+            {
+                CreateDeck(StageController.GetCurrentStage(), StageController.GetCurrentRound());
+            }
+
+            await UniTask.CompletedTask;
         }
 
         public static void EventSubscribe()
         {
-            EventManager.Subscribe<AddSelectedCardEvent>(OnAddSelectedCard);
-            EventManager.Subscribe<RemoveSelectedCardEvent>(OnRemoveSelectedCard);
+            if (_isSubscribed) return;
+
+            EventManager.Subscribe<StageRoundSelectedEvent>(OnStageRoundSelected);
+            _isSubscribed = true;
         }
 
-        private static async UniTask CreateDeck()
+        private static void OnStageRoundSelected(StageRoundSelectedEvent e)
+        {
+            CreateDeck(e.Stage, e.Round);
+        }
+
+        private static void CreateDeck(Game.Models.Stages.StageScriptable stage, Game.Models.Stages.RoundScriptable round)
         {
             _deck = CardController.GetStageCardScriptables();
             DebugLogger.Log(_deck.Count.ToString());
+            EventManager.Delegate(new RoundDeckCreatedEvent(stage, round, _deck.Count));
         }
 
-        public static CardScriptable GetRandomCard(EIngredientCategory category = EIngredientCategory.None)
+        public static IngredientScriptable GetRandomCard(EIngredientCategory category = EIngredientCategory.None)
         {
             return GetRandomCard(category, null);
         }
-        public static CardScriptable GetRandomCard(EIngredientCategory category = EIngredientCategory.None, List<CardScriptable> excludeCards = null)
+        public static IngredientScriptable GetRandomCard(EIngredientCategory category = EIngredientCategory.None, List<IngredientScriptable> excludeCards = null)
         {
+            if (_deck == null || _deck.Count == 0) return null;
+
             int totalWeight = 0;
             foreach (var card in _deck)
             {
@@ -66,7 +81,33 @@ namespace Game.Controllers
             return null;
         }
 
-        public static List<RecipeScriptable> EvaluateCardsWithRecipe(List<CardScriptable> handCards)
+        public static List<IngredientScriptable> DrawCards(int cardCount, IReadOnlyList<IngredientScriptable> excludeCards = null)
+        {
+            var drawnCards = new List<IngredientScriptable>(cardCount);
+            if (cardCount <= 0) return drawnCards;
+
+            for (int i = 0; i < cardCount; i++)
+            {
+                var cardsToExclude = new List<IngredientScriptable>(drawnCards);
+                if (excludeCards != null)
+                {
+                    for (int j = 0; j < excludeCards.Count; j++)
+                    {
+                        if (excludeCards[j] == null || cardsToExclude.Contains(excludeCards[j])) continue;
+                        cardsToExclude.Add(excludeCards[j]);
+                    }
+                }
+
+                var randomCard = GetRandomCard(excludeCards: cardsToExclude);
+                if (randomCard == null) break;
+
+                drawnCards.Add(randomCard);
+            }
+
+            return drawnCards;
+        }
+
+        public static List<RecipeScriptable> EvaluateCardsWithRecipe(List<IngredientScriptable> handCards)
         {
             var playerIngredients = new List<EIngredientType>();
             foreach (var card in handCards)
@@ -93,54 +134,11 @@ namespace Game.Controllers
             return matchingRecipes;
         }
 
-        public static List<CardScriptable> GetSelectedCards()
-        {
-            return _selectedCards ?? new List<CardScriptable>();
-        }
-
-        public static void OnAddSelectedCard(AddSelectedCardEvent e)
-        {
-            if (_selectedCards == null)
-                _selectedCards = new List<CardScriptable>(GameConstants.DEFAULT_SELECTED_CARDS_LIMIT);
-            if (_selectedCards.Count < 6 && !_selectedCards.Contains(e.Card))
-            {
-                _selectedCards.Add(e.Card);
-                EventManager.Delegate(new CardSelectedEvent(e.Card));
-            }
-        }
-
-        public static void OnRemoveSelectedCard(RemoveSelectedCardEvent e)
-        {
-            if (_selectedCards != null && _selectedCards.Contains(e.Card))
-            {
-                _selectedCards.Remove(e.Card);
-                EventManager.Delegate(new CardDeselectedEvent(e.Card));
-            }
-        }
-
         #region Test Methods
 
-        public static List<CardScriptable> CreateTestHand()
+        public static List<IngredientScriptable> CreateTestHand()
         {
-            var cards = new List<CardScriptable>();
-            //cards.Add(GetRandomCard(EIngredientCategory.Protein, cards));
-            //cards.Add(GetRandomCard(EIngredientCategory.Protein, cards));
-            //cards.Add(GetRandomCard(EIngredientCategory.Vegetable, cards));
-            //cards.Add(GetRandomCard(EIngredientCategory.Vegetable, cards));
-            //cards.Add(GetRandomCard(EIngredientCategory.Pantry, cards));
-            //cards.Add(GetRandomCard(EIngredientCategory.Pantry, cards));
-            //cards.Add(GetRandomCard(EIngredientCategory.Spice, cards));
-            //cards.Add(GetRandomCard(EIngredientCategory.Sauce, cards));
-            //cards.Add(GetRandomCard(EIngredientCategory.Vegetable, cards));
-            //cards.Add(GetRandomCard(EIngredientCategory.Pantry, cards));
-            //cards.Add(GetRandomCard(EIngredientCategory.Protein, cards));
-            cards.Add(GetRandomCard(excludeCards: cards));
-            cards.Add(GetRandomCard(excludeCards: cards));
-            cards.Add(GetRandomCard(excludeCards: cards));
-            cards.Add(GetRandomCard(excludeCards: cards));
-            cards.Add(GetRandomCard(excludeCards: cards));
-            cards.Add(GetRandomCard(excludeCards: cards));
-            return cards;
+            return DrawCards(6);
         }
         #endregion
     }

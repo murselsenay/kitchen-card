@@ -18,140 +18,140 @@ MonoBehaviour:
   m_GUID: e1e47fbc903df7849b09b6fa653e0521
   m_SerializeEntries:
   - m_GUID: 08943d3e67b649c408723ed35562a826
-    m_Address: Assets/_Sprites/Icons/Tools/Oven.png
+    m_Address: Oven
     m_ReadOnly: 0
     m_SerializedLabels:
     - tool
     - tool-oven
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 243a4f190bd94114193a57b1b1e95a9a
-    m_Address: Assets/_Sprites/Icons/Tools/Tongs.png
+    m_Address: Tongs
     m_ReadOnly: 0
     m_SerializedLabels:
     - tool
     - tool-tongs
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 25adb6d219d829b41b4cb43b9ba24101
-    m_Address: Assets/_Sprites/Icons/Tools/Measuring_Cup.png
+    m_Address: Measuring_Cup
     m_ReadOnly: 0
     m_SerializedLabels:
     - tool
     - tool-measuring-cup
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 2ae3219ac1eb6214f892bc65af1590ab
-    m_Address: Assets/_Sprites/Icons/Tools/Mesh_Strainer.png
+    m_Address: Mesh_Strainer
     m_ReadOnly: 0
     m_SerializedLabels:
     - tool
     - tool-mesh-strainer
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 2ba6735004f04fb47b05a4f7474d365a
-    m_Address: Assets/_Sprites/Icons/Tools/Wooden_Spoon.png
+    m_Address: Wooden_Spoon
     m_ReadOnly: 0
     m_SerializedLabels:
     - tool
     - tool-wooden-spoon
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 2e10c52f16f117e459003c9650a44573
-    m_Address: Assets/_Sprites/Icons/Tools/Pestle.png
+    m_Address: Pestle
     m_ReadOnly: 0
     m_SerializedLabels:
     - tool
     - tool-pestle
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 432044cc74b9b874a869be11e033b0d6
-    m_Address: Assets/_Sprites/Icons/Tools/Carbon_Steel_Wok.png
+    m_Address: Carbon_Steel_Wok
     m_ReadOnly: 0
     m_SerializedLabels:
     - tool
     - tool-carbon-steel-wok
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 4a75c06f70b679e428d998c50941e48f
-    m_Address: Assets/_Sprites/Icons/Tools/Stand_Mixer.png
+    m_Address: Stand_Mixer
     m_ReadOnly: 0
     m_SerializedLabels:
     - tool
     - tool-stand-mixer
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 5d49fdc99a429e84f8e5dc723e9619ab
-    m_Address: Assets/_Sprites/Icons/Tools/Rolling_Pin.png
+    m_Address: Rolling_Pin
     m_ReadOnly: 0
     m_SerializedLabels:
     - tool
     - tool-rolling-pin
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 6839133fbf19f1144a5186285a1d5655
-    m_Address: Assets/_Sprites/Icons/Tools/Fridge.png
+    m_Address: Fridge
     m_ReadOnly: 0
     m_SerializedLabels:
     - tool
     - tool-fridge
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 6a7b0f106dbc38b4b94bb70d99df04e9
-    m_Address: Assets/_Sprites/Icons/Tools/Pressure_Cooker.png
+    m_Address: Pressure_Cooker
     m_ReadOnly: 0
     m_SerializedLabels:
     - tool
     - tool-pressure-cooker
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 84ed913bdb3c941468523b10b7f86675
-    m_Address: Assets/_Sprites/Icons/Tools/Blender.png
+    m_Address: Blender
     m_ReadOnly: 0
     m_SerializedLabels:
     - tool
     - tool-blender
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 97006eeeb11ecb24c8392d68e400c44b
-    m_Address: Assets/_Sprites/Icons/Tools/Cooking_Pot.png
+    m_Address: Cooking_Pot
     m_ReadOnly: 0
     m_SerializedLabels:
     - tool
     - tool-cooking-pot
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 9c54e558266ab1141b598e39b5c7a85c
-    m_Address: Assets/_Sprites/Icons/Tools/Box_Grater.png
+    m_Address: Box_Grater
     m_ReadOnly: 0
     m_SerializedLabels:
     - tool
     - tool-box-grater
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: ae20ae57399805e45a582fbe2cf7fa66
-    m_Address: Assets/_Sprites/Icons/Tools/Meat_Cleaver.png
+    m_Address: Meat_Cleaver
     m_ReadOnly: 0
     m_SerializedLabels:
     - tool
     - tool-meat-cleaver
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: b8e56b32d5b430d4fb2ff4113391c6dd
-    m_Address: Assets/_Sprites/Icons/Tools/Knife.png
+    m_Address: Knife
     m_ReadOnly: 0
     m_SerializedLabels:
     - tool
     - tool-knife
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: bca1efb7143163046bbcfa133fe660f8
-    m_Address: Assets/_Sprites/Icons/Tools/Zester.png
+    m_Address: Zester
     m_ReadOnly: 0
     m_SerializedLabels:
     - tool
     - tool-zester
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: c1d5c05b6b349a641b505b55ed3ed72e
-    m_Address: Assets/_Sprites/Icons/Tools/Blowtorch.png
+    m_Address: Blowtorch
     m_ReadOnly: 0
     m_SerializedLabels:
     - tool
     - tool-blowtorch
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: c3d180ecbfabd7b46886b4e8e6008c1a
-    m_Address: Assets/_Sprites/Icons/Tools/Iron_Pan.png
+    m_Address: Iron_Pan
     m_ReadOnly: 0
     m_SerializedLabels:
     - tool
     - tool-iron-pan
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: c5fe93998ccf7294cbba4e2bc580194a
-    m_Address: Assets/_Sprites/Icons/Tools/Sous_Vide.png
+    m_Address: Sous_Vide
     m_ReadOnly: 0
     m_SerializedLabels:
     - tool

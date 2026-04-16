@@ -3,10 +3,11 @@ using Modules.AdressableSystem;
 using Cysharp.Threading.Tasks;
 using Game.Core.Constants;
 using Game.Core.Enums;
+using Game.Models.Scoring;
 
 namespace Game.Models.Cards
 {
-    public class CardScriptable : ScriptableObject
+    public class IngredientScriptable : ScriptableObject
     {
         [SerializeField] private string _name;
         [SerializeField] private string _description;
@@ -24,5 +25,6 @@ namespace Game.Models.Cards
         public virtual string GetResourceKey() { return string.Empty; }
         public async UniTask<Sprite> GetIconSprite() => await AddressableManager.LoadAsync<Sprite>(GetResourceKey());
         public int GetTotalWeight() => GameConstants.RARITY_WEIGHTS[_rarity];
+        public int GetPoint() => ScoringConfig.Instance.GetIngredientPoints(this);
     }
 }

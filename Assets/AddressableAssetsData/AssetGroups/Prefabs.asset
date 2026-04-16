@@ -18,11 +18,18 @@ MonoBehaviour:
   m_GUID: 698a0fae5feebee4892700e8e763aebb
   m_SerializeEntries:
   - m_GUID: 5ebec1a7f76798049bf063f82142cc07
-    m_Address: Assets/_Prefabs/Game/Card.prefab
+    m_Address: Card
     m_ReadOnly: 0
     m_SerializedLabels:
     - card-item
     - prefabs
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: f6ed08f6478c5554386c71ce4184e42e
+    m_Address: Assets/_Prefabs/Game/Stage/Round_Selection_Item.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - prefabs
+    - round-selection-item
     FlaggedDuringContentUpdateRestriction: 0
   m_ReadOnly: 0
   m_Settings: {fileID: 11400000, guid: 5b187456e50516e4cb3adbf6b649f950, type: 2}

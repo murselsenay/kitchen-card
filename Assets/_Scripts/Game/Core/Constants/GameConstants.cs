@@ -18,6 +18,7 @@ namespace Game.Core.Constants
         public const string RECIPE_SCRIPTABLE_ADDRESSABLE_KEY = "recipe-scriptables";
         public const string STAGE_SCRIPTABLE_ADDRESSABLE_KEY = "stage-scriptables";
         public const string CARD_ITEM_SCRIPTABLE_ADDRESSABLE_KEY = "card-item";
+        public const string ROUND_SELECTION_ITEM_ADDRESSABLE_KEY = "round-selection-item";
         #endregion
 
         #region Game Constants

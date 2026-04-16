@@ -10,8 +10,8 @@ namespace Game.Controllers
 {
     public static class CardController
     {
-        private static Dictionary<EIngredientCategory, List<CardScriptable>> _cardScriptables;
-        private static List<CardScriptable> _allCardScriptables;
+        private static Dictionary<EIngredientCategory, List<IngredientScriptable>> _cardScriptables;
+        private static List<IngredientScriptable> _allCardScriptables;
         public static async UniTask Init()
         {
             await LoadCardData();
@@ -19,23 +19,23 @@ namespace Game.Controllers
 
         private static async UniTask LoadCardData()
         {
-            var cardScriptables = await AddressableManager.LoadAllAsync<CardScriptable>(GameConstants.INGREDIENT_SCRIPTABLE_ADDRESSABLE_KEY);
+            var cardScriptables = await AddressableManager.LoadAllAsync<IngredientScriptable>(GameConstants.INGREDIENT_SCRIPTABLE_ADDRESSABLE_KEY);
 
-            _cardScriptables = new Dictionary<EIngredientCategory, List<CardScriptable>>();
+            _cardScriptables = new Dictionary<EIngredientCategory, List<IngredientScriptable>>();
 
             foreach (var card in cardScriptables)
             {
                 if (CardConstants.EXCLUDED_INGREDIENTS.Contains(card.GetIngredientType())) continue;
                 if (!_cardScriptables.ContainsKey(card.GetCardCategory()))
                 {
-                    _cardScriptables[card.GetCardCategory()] = new List<CardScriptable>();
+                    _cardScriptables[card.GetCardCategory()] = new List<IngredientScriptable>();
                 }
                 _cardScriptables[card.GetCardCategory()].Add(card);
             }
         }
 
         #region Getters
-        public static CardScriptable GetCard(EIngredientType ingredientType)
+        public static IngredientScriptable GetCard(EIngredientType ingredientType)
         {
             foreach (var category in _cardScriptables.Values)
             {
@@ -46,9 +46,9 @@ namespace Game.Controllers
             return null;
         }
 
-        public static List<CardScriptable> GetCards(List<EIngredientType> ingredientTypes)
+        public static List<IngredientScriptable> GetCards(List<EIngredientType> ingredientTypes)
         {
-            var cards = new List<CardScriptable>();
+            var cards = new List<IngredientScriptable>();
             foreach (var ingredientType in ingredientTypes)
             {
                 var card = GetCard(ingredientType);
@@ -81,12 +81,12 @@ namespace Game.Controllers
         {
             return _cardScriptables[EIngredientCategory.Pantry].ConvertAll(card => (PantryScriptable)card);
         }
-        public static List<CardScriptable> GetAllCardScriptables()
+        public static List<IngredientScriptable> GetAllCardScriptables()
         {
             if (_allCardScriptables != null)
                 return _allCardScriptables;
 
-            _allCardScriptables = new List<CardScriptable>();
+            _allCardScriptables = new List<IngredientScriptable>();
             foreach (var category in _cardScriptables.Values)
             {
                 _allCardScriptables.AddRange(category);
@@ -94,11 +94,14 @@ namespace Game.Controllers
             return _allCardScriptables;
         }
 
-        public static List<CardScriptable> GetStageCardScriptables()
+        public static List<IngredientScriptable> GetStageCardScriptables()
         {
-            var cards = new List<CardScriptable>();
+            var cards = new List<IngredientScriptable>();
+            var currentRound = StageController.GetCurrentRound();
+            if (currentRound == null)
+                return cards;
 
-            foreach (var recipe in StageController.GetCurrentRound().GetAvailableRecipes())
+            foreach (var recipe in currentRound.GetAvailableRecipes())
             {
                 var recipeScriptable = RecipeController.GetRecipeScriptable(recipe);
                 if (recipeScriptable != null)

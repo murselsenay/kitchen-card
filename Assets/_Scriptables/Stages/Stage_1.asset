@@ -12,5 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4ac4309204746a64ca17d6b655c12250, type: 3}
   m_Name: Stage_1
   m_EditorClassIdentifier: 
+  _id: stage-1
   _rounds:
   - {fileID: 11400000, guid: 12f5dd2a7be38bd4fbb676a499c9568a, type: 2}
+  - {fileID: 11400000, guid: df68e969f7b8bdc45b43181c9b2fbe85, type: 2}
+  - {fileID: 11400000, guid: 11aeb35b64388a34b85dbc402742875e, type: 2}

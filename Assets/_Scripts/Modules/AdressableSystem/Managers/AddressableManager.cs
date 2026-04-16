@@ -87,6 +87,7 @@ namespace Modules.AdressableSystem
             var comp = go.GetComponent<TComponent>();
             if (comp != null) return comp;
 
+            Addressables.ReleaseInstance(go);
             DebugLogger.LogErrorFormat(AddressableLogMessages.ADDRESSABLE_COMPONENT_NOT_FOUND, address, typeof(TComponent).FullName);
             return null;
         }

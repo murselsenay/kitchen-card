@@ -1,8 +1,10 @@
 using Cysharp.Threading.Tasks;
 using Modules.AdressableSystem;
 using Game.Core.Constants;
+using Game.Core.Events;
 using Game.Models.Progression;
 using Game.Models.Stages;
+using Modules.Event.Managers;
 using Modules.Logger;
 using System.Collections.Generic;
 using System.Linq;
@@ -41,24 +43,38 @@ namespace Game.Controllers
         public static void StartStage()
         {
             _currentStage = GetNextStage();
-            _currentRound = GetNextRound();
+            _currentRound = null;
             if (_currentStage == null)
             {
                 DebugLogger.Log("No more stages to play.");
                 return;
             }
 
-            if (_currentRound == null)
-            {
-                DebugLogger.Log("No more round to play.");
-                return;
-            }
+            EventManager.Delegate(new StageStartedEvent(_currentStage));
         }
         public static void CompleteStage()
         {
             _stageProgressions.Find(x => x.Id == _currentStage.GetId()).CompleteStage();
         }
         public static StageScriptable GetCurrentStage() => _currentStage;
+        public static List<RoundScriptable> GetSelectableRounds(int maxCount = 3)
+        {
+            var rounds = new List<RoundScriptable>();
+            if (_currentStage == null) return rounds;
+
+            var stageProgression = _stageProgressions.FirstOrDefault(x => x.Id == _currentStage.GetId());
+            foreach (var round in _currentStage.GetRounds())
+            {
+                bool exists = stageProgression.RoundProgressions.Any(x => x.Id == round.GetId());
+                if (exists) continue;
+
+                rounds.Add(round);
+                if (rounds.Count >= maxCount)
+                    break;
+            }
+
+            return rounds;
+        }
         public static StageScriptable GetNextStage()
         {
             if (_stages == null || _stageProgressions == null) return null;
@@ -80,6 +96,31 @@ namespace Game.Controllers
         public static void CompleteRound(string roundId)
         {
             _stageProgressions.Find(x => x.Id == _currentStage.GetId()).CompleteRound(roundId);
+
+            if (_currentRound != null && _currentRound.GetId() == roundId)
+            {
+                _currentRound = null;
+            }
+        }
+        public static bool SelectNextRound()
+        {
+            var nextRound = GetNextRound();
+            if (nextRound == null) return false;
+
+            _currentRound = nextRound;
+            EventManager.Delegate(new StageRoundSelectedEvent(_currentStage, _currentRound));
+            return true;
+        }
+        public static bool SelectRound(string roundId)
+        {
+            if (_currentStage == null || string.IsNullOrEmpty(roundId)) return false;
+
+            var round = GetSelectableRounds(int.MaxValue).FirstOrDefault(x => x.GetId() == roundId);
+            if (round == null) return false;
+
+            _currentRound = round;
+            EventManager.Delegate(new StageRoundSelectedEvent(_currentStage, _currentRound));
+            return true;
         }
         public static RoundScriptable GetNextRound()
         {

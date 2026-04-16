@@ -18,7 +18,7 @@ MonoBehaviour:
   m_GUID: fe58e9af8ba8a0d4499121443ed33d17
   m_SerializeEntries:
   - m_GUID: 21c6c1dd696be51488b7c34ee8e931f8
-    m_Address: Assets/_Scriptables/Ingredients
+    m_Address: Ingredients
     m_ReadOnly: 0
     m_SerializedLabels:
     - ingredient-scriptables

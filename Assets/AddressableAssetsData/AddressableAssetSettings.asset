@@ -302,6 +302,7 @@ MonoBehaviour:
     - prefabs
     - card-item
     - stage-scriptables
+    - round-selection-item
   m_SchemaTemplates: []
   m_GroupTemplateObjects:
   - {fileID: 11400000, guid: e9a0f2d9c0abbb44097706679c941769, type: 2}

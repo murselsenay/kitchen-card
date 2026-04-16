@@ -1,0 +1,56 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1902320da028c9e47ad67a34fdfb4f3c, type: 3}
+  m_Name: ScoringConfig
+  m_EditorClassIdentifier: 
+  _ingredientRarityPoints:
+  - Rarity: 1
+    Points: 2
+  - Rarity: 2
+    Points: 4
+  - Rarity: 3
+    Points: 10
+  _ingredientCategoryPoints:
+  - Category: 1
+    Points: 2
+  - Category: 2
+    Points: 2
+  - Category: 4
+    Points: 2
+  - Category: 3
+    Points: 2
+  - Category: 5
+    Points: 5
+  - Category: 6
+    Points: 5
+  _recipeRarityBonuses:
+  - Rarity: 1
+    Points: 5
+  - Rarity: 2
+    Points: 15
+  - Rarity: 3
+    Points: 25
+  _recipeCategoryBonuses:
+  - Category: 2
+    Points: 20
+  - Category: 3
+    Points: 30
+  - Category: 4
+    Points: 40
+  - Category: 5
+    Points: 50
+  - Category: 6
+    Points: 60
+  - Category: 100
+    Points: 100
+  - Category: 101
+    Points: 100

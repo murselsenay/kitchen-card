@@ -18,7 +18,7 @@ MonoBehaviour:
   m_GUID: 265c544763f7d28499befebd7b9e5f8f
   m_SerializeEntries:
   - m_GUID: 49c786d13f36ed849a3d4552a8de1514
-    m_Address: Assets/_Scriptables/Recipes
+    m_Address: Recipes
     m_ReadOnly: 0
     m_SerializedLabels:
     - recipe-scriptables
