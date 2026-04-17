@@ -11,6 +11,8 @@ GameObject:
   - component: {fileID: 3750275781398574727}
   - component: {fileID: 6917534321513063980}
   - component: {fileID: 8728282219520179713}
+  - component: {fileID: 477726260192290311}
+  - component: {fileID: 2575286083818475688}
   - component: {fileID: 8770632878371406804}
   m_Layer: 0
   m_Name: Card
@@ -61,8 +63,35 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 58b996b6e5b205c49bef7d6a3f32459e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _cardViewer: {fileID: 477726260192290311}
+  _cardAnimator: {fileID: 2575286083818475688}
+--- !u!114 &477726260192290311
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 961601925337673914}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 09f5987f30e24ff408a44182ccd10683, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
   _backgroundSpriteRenderer: {fileID: 3020530031316921588}
   _iconSpriteRenderer: {fileID: 3183023724138521147}
+--- !u!114 &2575286083818475688
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 961601925337673914}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ccd3bc7e9eb482f40b3fe0d572c2f50a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _selectedYOffset: 2
 --- !u!61 &8770632878371406804
 BoxCollider2D:
   m_ObjectHideFlags: 0

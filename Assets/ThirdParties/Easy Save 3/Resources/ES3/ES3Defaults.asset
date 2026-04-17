@@ -39,6 +39,7 @@ MonoBehaviour:
     - AYellowpaper.SerializedCollections
     - NaughtyAttributes.Core
     - NaughtyAttributes.Test
+    - ParticleImage
     - UniTask
     - UniTask.Addressables
     - UniTask.DOTween

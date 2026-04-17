@@ -1,4 +1,5 @@
 using Game.Models.Cards;
+using Game.Models.Play;
 using Game.Models.Recipes;
 using System.Collections.Generic;
 
@@ -100,11 +101,13 @@ namespace Game.Core.Events
     {
         public IReadOnlyList<IngredientScriptable> DiscardedCards;
         public IReadOnlyList<IngredientScriptable> DrawnCards;
+        public IReadOnlyList<int> RemovedCardIndexes;
 
-        public SelectedCardsDiscardedEvent(IReadOnlyList<IngredientScriptable> discardedCards, IReadOnlyList<IngredientScriptable> drawnCards)
+        public SelectedCardsDiscardedEvent(IReadOnlyList<IngredientScriptable> discardedCards, IReadOnlyList<IngredientScriptable> drawnCards, IReadOnlyList<int> removedCardIndexes)
         {
             DiscardedCards = discardedCards;
             DrawnCards = drawnCards;
+            RemovedCardIndexes = removedCardIndexes;
         }
     }
 
@@ -112,13 +115,17 @@ namespace Game.Core.Events
     {
         public IReadOnlyList<IngredientScriptable> PlayedCards;
         public IReadOnlyList<IngredientScriptable> DrawnCards;
+        public IReadOnlyList<int> RemovedCardIndexes;
         public RecipeScriptable PlayedRecipe;
+        public PlayResolutionResult Resolution;
 
-        public SelectedCardsPlayedEvent(IReadOnlyList<IngredientScriptable> playedCards, IReadOnlyList<IngredientScriptable> drawnCards, RecipeScriptable playedRecipe)
+        public SelectedCardsPlayedEvent(IReadOnlyList<IngredientScriptable> playedCards, IReadOnlyList<IngredientScriptable> drawnCards, IReadOnlyList<int> removedCardIndexes, RecipeScriptable playedRecipe, PlayResolutionResult resolution)
         {
             PlayedCards = playedCards;
             DrawnCards = drawnCards;
+            RemovedCardIndexes = removedCardIndexes;
             PlayedRecipe = playedRecipe;
+            Resolution = resolution;
         }
     }
 }

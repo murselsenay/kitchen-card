@@ -25,7 +25,7 @@ MonoBehaviour:
     - prefabs
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: f6ed08f6478c5554386c71ce4184e42e
-    m_Address: Assets/_Prefabs/Game/Stage/Round_Selection_Item.prefab
+    m_Address: Round_Selection_Item
     m_ReadOnly: 0
     m_SerializedLabels:
     - prefabs

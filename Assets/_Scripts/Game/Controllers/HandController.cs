@@ -1,6 +1,7 @@
 using Game.Core.Constants;
 using Game.Core.Events;
 using Game.Models.Cards;
+using Game.Models.Play;
 using Game.Models.Recipes;
 using Game.Models.Stages;
 using Modules.Event.Managers;
@@ -147,6 +148,7 @@ namespace Game.Controllers
 
             var affectedCards = new List<IngredientScriptable>(_selectedCards);
             var playedRecipe = isPlayAction ? _previewedRecipe : null;
+            var playResolution = isPlayAction ? PlayResolutionResolver.Resolve(affectedCards, playedRecipe) : null;
             var removedCardIndexes = new List<int>(affectedCards.Count);
 
             for (int i = 0; i < affectedCards.Count; i++)
@@ -179,11 +181,11 @@ namespace Game.Controllers
 
             if (isPlayAction)
             {
-                EventManager.Delegate(new SelectedCardsPlayedEvent(affectedCards, drawnCards, playedRecipe));
+                EventManager.Delegate(new SelectedCardsPlayedEvent(affectedCards, drawnCards, removedCardIndexes, playedRecipe, playResolution));
             }
             else
             {
-                EventManager.Delegate(new SelectedCardsDiscardedEvent(affectedCards, drawnCards));
+                EventManager.Delegate(new SelectedCardsDiscardedEvent(affectedCards, drawnCards, removedCardIndexes));
             }
 
             DispatchHandUpdated();

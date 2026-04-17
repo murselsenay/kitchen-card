@@ -27,7 +27,12 @@ namespace Game.Models.Recipes
         public ERecipeType GetRecipeType() => _recipeType;
         public ERecipeCategory GetRecipeCategory() => _recipeCategory;
         public List<EIngredientType> GetIngredients() => _ingredients;
-        public virtual string GetResourceKey() => $"{_recipeType.ToString().ToLower()}";
+        public virtual string GetResourceKey()
+        {
+
+            var key = $"recipe-{GetRecipeType().ToString().ToLower()}";
+            return key.Replace("_", "-").ToLower();
+        }
         public int GetTotalWeight() => GameConstants.RARITY_WEIGHTS[GetRarity()];
         public int GetPoint() => ScoringConfig.Instance.GetRecipePoints(this);
         public async UniTask<Sprite> GetSprite() => await AddressableManager.LoadAsync<Sprite>(GetResourceKey());
